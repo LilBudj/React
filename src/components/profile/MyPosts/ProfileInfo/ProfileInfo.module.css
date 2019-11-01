@@ -1,0 +1,23 @@
+.ava{
+    height: 150px;
+    width: 150px;
+    border-radius: 60px;
+    border-style: solid;
+}
+
+.profileInfo{
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    margin: 20px;
+}
+
+.info{
+    margin-left: 10px;
+    line-height: 0.5em;
+}
+
+.directInfo{
+    font-family: "Bell MT";
+    color: white;
+    margin-top: 25px;
+}

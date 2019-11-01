@@ -1,0 +1,31 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    margin-right: 30px;
+}
+
+.DialogList{
+    border-style: dashed;
+}
+
+.Dialog_display{
+    border-style: dashed;
+}
+
+.dialog{
+    padding: 10px;
+}
+
+.message{
+    padding: 10px;
+}
+
+.nametext{
+    color:white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.activeName{
+    font-size: large;
+}

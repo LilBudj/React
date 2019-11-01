@@ -1,0 +1,19 @@
+.nav {
+    margin: 0px 30px 0px 30px;
+    grid-area: n;
+    background-color: red;
+}
+
+.aitem{
+    background-color: #5e0207;
+}
+
+.item{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    margin-bottom: 10px;
+    list-style-type: none;
+}

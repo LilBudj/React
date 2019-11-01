@@ -1,0 +1,9 @@
+.content{
+    grid-area: c;
+}
+
+.contentImg{
+    width: 700px;
+    height: 150px;
+}
+
