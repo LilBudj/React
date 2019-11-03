@@ -1,11 +1,13 @@
 import React from 'react';
 import style from './Profile.module.css';
-//import Post from './MyPosts/Post/Post';
+import Post from './MyPosts/Post/Post';
 import Incubator from "./MyPosts/Post_Incubator/IncubatorP";
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import Thiefs from './MyPosts/Vors.jpg'
 
 const Profile = (props) =>{
+
+    let PostElements = props.data.map((obj) => (<Post message={obj.message} likes={obj.likes}/>));
 
     return(
         <section className={style.content}>
@@ -15,7 +17,7 @@ const Profile = (props) =>{
             </div>
             <ProfileInfo name="Владимир Моголов" status="Вор в законе" age="43" wife="Zona"/>
             <Incubator/>
-            {props.data}
+            {PostElements}
         </section>
     );
 };

@@ -17,3 +17,18 @@ li{
     margin-bottom: 10px;
     list-style-type: none;
 }
+
+.photo{
+    height:50px;
+    width:50px;
+    border-radius: 30px;
+}
+
+.friendsBlock{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.friends{
+    margin: 30px;
+}
