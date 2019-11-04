@@ -1,14 +1,26 @@
 import React from 'react';
+import style from './Incubator.module.css';
 
-const Incubator = () => {
+const Incubator = (props) => {
+
+    let newPost = React.createRef();
+
+    let AddNewPost = () =>{
+        props.AddPost();
+    };
+
+    let newValue =() => {
+        let text = newPost.current.value;
+        props.addCurrentValue(text);
+    };
 
     return(
         <div>
             <div>
-                <textarea> What's new?</textarea>
+                <textarea ref={newPost} onChange={newValue} value={props.currentPost}> What's new?</textarea>
             </div>
             <div>
-                <button> Post </button>
+                <button onClick={AddNewPost}> Post </button>
             </div>
         </div>
     );
