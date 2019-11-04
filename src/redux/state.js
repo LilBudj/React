@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+  console.log('!');
+};
 
 let state = {
     profileData: {
@@ -30,7 +32,7 @@ let state = {
     ]
 };
 
-export let AddPost = () =>{
+export const AddPost = () =>{
     let obj = {
         message: state.profileData.currentValue,
         id: 5,
@@ -41,12 +43,12 @@ export let AddPost = () =>{
     rerenderEntireTree(state);
 };
 
-export let addCurrentValue = (currentValue) => {
+export const addCurrentValue = (currentValue) => {
   state.profileData.currentValue = currentValue;
   rerenderEntireTree(state);
 };
 
-export let addMessage = () => {
+export const addMessage = () => {
     let messageObj = {
         message: state.DialogsData.currentMessage,
         id: 3,
@@ -56,9 +58,13 @@ export let addMessage = () => {
     rerenderEntireTree(state)
 };
 
-export let updateCurrentMessage = (currentMessage) => {
+export const updateCurrentMessage = (currentMessage) => {
     state.DialogsData.currentMessage = currentMessage;
     rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer; //Observer pattern
 };
 
 export default state

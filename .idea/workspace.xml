@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/Incubator.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/IncubatorP.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/IncubatorP.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +62,7 @@
       <workItem from="1572862721470" duration="295000" />
       <workItem from="1572869643347" duration="2231000" />
       <workItem from="1572880077044" duration="894000" />
-      <workItem from="1572881219089" duration="12467000" />
+      <workItem from="1572881219089" duration="13172000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -84,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572808586384</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Flux modify">
+      <created>1572898843279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572898843279</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Data modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data modification" />
+    <MESSAGE value="Flux modify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flux modify" />
   </component>
 </project>
