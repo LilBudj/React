@@ -11,17 +11,16 @@ import Settings from "./components/Settings/Settings";
 import Games from "./components/Games/Games";
 
 function App(props) {
-
   return (
       <BrowserRouter>
           <div className="App-wrapper">
               <Header/>
-              <Nav friends={props.friends}/>
+              <Nav friends={props.state.friendsData}/>
               <div>
-                  <Route exact path='/Profile' render={ () => <Profile data={props.data} AddPost={props.AddPost}
-                                                                       currentPost={props.currentPost} addCurrentValue={props.addCurrentValue}/>} />
-                  <Route exact path='/Dialogs' render={ () => <Dialogs currentMessage={props.currentMessage} updateCurrentMessage={props.updateCurrentMessage}
-                                                                       addMessage={props.addMessage} DialogData={props.DialogData} MessagesData={props.MessageData} />}/>
+                  <Route exact path='/Profile' render={ () => <Profile data={props.state.profileData.postData} addPost={props.addPost}
+                                                                       currentPost={props.state.profileData.currentValue} addCurrentValue={props.addCurrentValue}/>} />
+                  <Route exact path='/Dialogs' render={ () => <Dialogs currentMessage={props.state.dialogsData.currentMessage} updateCurrentMessage={props.updateCurrentMessage}
+                                                                       addMessage={props.addMessage} dialogData={props.state.dialogsData.dialogData} messagesData={props.state.dialogsData.messagesData} />}/>
                   <Route exact path='/Feed' render={ () => <Feed/>}/>
                   <Route exact path='/Music' render={ () => <Music/>}/>
                   <Route exact path='/Settings' render={ () => <Settings/>}/>

@@ -16,7 +16,7 @@ const Profile = (props) =>{
                      alt='content'/>
             </div>
             <ProfileInfo name="Владимир Моголов" status="Вор в законе" age="43" wife="Zona"/>
-            <Incubator AddPost={props.AddPost} currentPost={props.currentPost} addCurrentValue={props.addCurrentValue}/>
+            <Incubator addPost={props.addPost} currentPost={props.currentPost} addCurrentValue={props.addCurrentValue}/>
             {PostElements}
         </section>
     );

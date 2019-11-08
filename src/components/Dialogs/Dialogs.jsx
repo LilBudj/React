@@ -4,13 +4,13 @@ import Dialog from "./Dialog";
 import Message from "./Message";
 
 const Dialogs = (props) => {
-    let DialogItems = props.DialogData.map((obj) => (<Dialog name={obj.name} id={obj.id} src={obj.src}/>));
+    let DialogItems = props.dialogData.map((obj) => (<Dialog name={obj.name} id={obj.id} src={obj.src}/>));
 
-    let MessageItems = props.MessagesData.map((obj) => {
+    let MessageItems = props.messagesData.map((obj) => {
         return (<Message message={obj.message}/>)
     });
 
-    let newElement = React.createRef()
+    let newElement = React.createRef();
     let Send = () => {
         let text = newElement.current.value;
         props.addMessage(text);

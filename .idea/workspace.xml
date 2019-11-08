@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/IncubatorP.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/IncubatorP.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +30,12 @@
   <component name="ProjectId" id="1SvYpFOkyhwip8LjoHl1bWVqoqK" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../portfolio" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -62,7 +66,16 @@
       <workItem from="1572862721470" duration="295000" />
       <workItem from="1572869643347" duration="2231000" />
       <workItem from="1572880077044" duration="894000" />
-      <workItem from="1572881219089" duration="13172000" />
+      <workItem from="1572881219089" duration="14023000" />
+      <workItem from="1572961418698" duration="2666000" />
+      <workItem from="1572969654867" duration="9000" />
+      <workItem from="1572989078780" duration="1248000" />
+      <workItem from="1573062245414" duration="4556000" />
+      <workItem from="1573159074113" duration="702000" />
+      <workItem from="1573160025059" duration="908000" />
+      <workItem from="1573202529146" duration="978000" />
+      <workItem from="1573216761134" duration="1980000" />
+      <workItem from="1573220189942" duration="2849000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -85,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572898843279</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Observer Pattern">
+      <created>1572899764006</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572899764006</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Data modification" />
     <MESSAGE value="Flux modify" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flux modify" />
+    <MESSAGE value="Observer Pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Observer Pattern" />
   </component>
 </project>

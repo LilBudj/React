@@ -6,7 +6,7 @@ const Incubator = (props) => {
     let newPost = React.createRef();
 
     let AddNewPost = () =>{
-        props.AddPost();
+        props.addPost();
     };
 
     let newValue =() => {
