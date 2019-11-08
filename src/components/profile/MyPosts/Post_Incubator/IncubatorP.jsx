@@ -6,12 +6,12 @@ const Incubator = (props) => {
     let newPost = React.createRef();
 
     let AddNewPost = () =>{
-        props.addPost();
+        props.dispatch({type: 'addPost'});
     };
 
     let newValue =() => {
         let text = newPost.current.value;
-        props.addCurrentValue(text);
+        props.dispatch({ type: 'addCurrentPost', currentPost: text});
     };
 
     return(

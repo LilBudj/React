@@ -17,10 +17,10 @@ function App(props) {
               <Header/>
               <Nav friends={props.state.friendsData}/>
               <div>
-                  <Route exact path='/Profile' render={ () => <Profile data={props.state.profileData.postData} addPost={props.addPost}
-                                                                       currentPost={props.state.profileData.currentValue} addCurrentValue={props.addCurrentValue}/>} />
-                  <Route exact path='/Dialogs' render={ () => <Dialogs currentMessage={props.state.dialogsData.currentMessage} updateCurrentMessage={props.updateCurrentMessage}
-                                                                       addMessage={props.addMessage} dialogData={props.state.dialogsData.dialogData} messagesData={props.state.dialogsData.messagesData} />}/>
+                  <Route exact path='/Profile' render={ () => <Profile data={props.state.profileData.postData} dispatch={props.dispatch}
+                                                                       currentPost={props.state.profileData.currentValue}/>} />
+                  <Route exact path='/Dialogs' render={ () => <Dialogs currentMessage={props.state.dialogsData.currentMessage} dispatch={props.dispatch}
+                                                                       dialogData={props.state.dialogsData.dialogData} messagesData={props.state.dialogsData.messagesData} />}/>
                   <Route exact path='/Feed' render={ () => <Feed/>}/>
                   <Route exact path='/Music' render={ () => <Music/>}/>
                   <Route exact path='/Settings' render={ () => <Settings/>}/>

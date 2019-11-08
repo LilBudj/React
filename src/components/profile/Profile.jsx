@@ -7,7 +7,7 @@ import Thiefs from './MyPosts/Vors.jpg'
 
 const Profile = (props) =>{
 
-    let PostElements = props.data.map((obj) => (<Post message={obj.message} likes={obj.likes}/>));
+    let PostElements = props.data.map((obj) => (<Post message={obj.message} likes={obj.likes} id={obj.id} dispatch={props.dispatch}/>));
 
     return(
         <section className={style.content}>
@@ -16,7 +16,7 @@ const Profile = (props) =>{
                      alt='content'/>
             </div>
             <ProfileInfo name="Владимир Моголов" status="Вор в законе" age="43" wife="Zona"/>
-            <Incubator addPost={props.addPost} currentPost={props.currentPost} addCurrentValue={props.addCurrentValue}/>
+            <Incubator dispatch={props.dispatch} addPost={props.addPost} currentPost={props.currentPost} addCurrentValue={props.addCurrentValue}/>
             {PostElements}
         </section>
     );
