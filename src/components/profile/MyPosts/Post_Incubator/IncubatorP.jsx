@@ -1,17 +1,18 @@
 import React from 'react';
 import style from './Incubator.module.css';
+import {addCurrentPostActionCreator, addPostActionCreator} from "../../../../redux/state";
 
 const Incubator = (props) => {
 
     let newPost = React.createRef();
 
     let AddNewPost = () =>{
-        props.dispatch({type: 'addPost'});
+        props.dispatch(addPostActionCreator());
     };
 
     let newValue =() => {
         let text = newPost.current.value;
-        props.dispatch({ type: 'addCurrentPost', currentPost: text});
+        props.dispatch(addCurrentPostActionCreator(text));
     };
 
     return(

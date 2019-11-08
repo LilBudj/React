@@ -114,7 +114,7 @@ const store = {
         if (action.type === 'addMessage') {
             let messageObj = {
                 message: this._state.dialogsData.currentMessage,
-                id: 3,
+                id: this._state.dialogsData.messagesData.length + 1,
             };
             this._state.dialogsData.messagesData.push(messageObj);
             this._state.dialogsData.currentMessage = '';
@@ -127,5 +127,37 @@ const store = {
     },
 };
 
+export const likePressActionCreator = (id) => {
+    return {
+        type: 'likeCounter',
+        id: id,
+    };
+};
+
+export const addPostActionCreator = () => {
+    return {
+        type: 'addPost',
+    };
+};
+
+export const addCurrentPostActionCreator = (currentPost) => {
+    return {
+        type: 'addCurrentPost',
+        currentPost: currentPost,
+    };
+};
+
+export const addMessageActionCreator = () => {
+    return {
+        type: 'addMessage',
+    };
+};
+
+export const updateCurrentMessageActionCreator = (currentMessage) => {
+    return {
+        type: 'updateCurrentMessage',
+        currentMessage: currentMessage,
+    };
+};
 
 export default store

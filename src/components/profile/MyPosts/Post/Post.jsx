@@ -1,11 +1,13 @@
 import React from 'react';
 import style from './Post.module.css'
 import Mogol from './../ProfileInfo/Mogol.jpg'
+import {likePressActionCreator} from "../../../../redux/state";
+
 
 const Post = (props) => {
 
     let likePress = () => {
-        props.dispatch({type: 'likeCounter', id: props.id});
+        props.dispatch(likePressActionCreator(props.id));
     };
 
     return(
