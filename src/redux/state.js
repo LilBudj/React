@@ -1,3 +1,7 @@
+import profileReducer from "./ProfileReducer";
+import dialogsReducer from "./DialogsReducer";
+import friendsReducer from "./FriendsReducer";
+
 const store = {
     _subscriber() {
         console.log('store has been changed');
@@ -93,37 +97,12 @@ const store = {
     },
 
     dispatch(action) {
-        if (action.type === 'addPost') {
-            let obj = {
-                message: this._state.profileData.currentValue,
-                id: this._state.profileData.postData.length + 1,
-                likes: 3
-            };
-            this._state.profileData.postData.push(obj);
-            this._state.profileData.currentValue = '';
-            this._subscriber();
-        }
-        if (action.type === 'likeCounter') {
-            this._state.profileData.postData[action.id-1].likes++;
-            this._subscriber();
-        }
-        if (action.type === 'addCurrentPost') {
-            this._state.profileData.currentValue = action.currentPost;
-            this._subscriber();
-        }
-        if (action.type === 'addMessage') {
-            let messageObj = {
-                message: this._state.dialogsData.currentMessage,
-                id: this._state.dialogsData.messagesData.length + 1,
-            };
-            this._state.dialogsData.messagesData.push(messageObj);
-            this._state.dialogsData.currentMessage = '';
-            this._subscriber();
-        }
-        if (action.type === 'updateCurrentMessage') {
-            this._state.dialogsData.currentMessage = action.currentMessage;
-            this._subscriber();
-        }
+
+        this._state.profileData = profileReducer(this._state.profileData, action);
+        this._state.dialogsData = dialogsReducer(this._state.dialogsData, action);
+        this._state.friendsData = friendsReducer(this._state.friendsData, action);
+
+        this._subscriber();
     },
 };
 
