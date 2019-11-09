@@ -24,4 +24,24 @@ const profileReducer = (state, action) => {
     }
 };
 
+export const likePressActionCreator = (id) => {
+    return {
+        type: 'likeCounter',
+        id: id,
+    };
+};
+
+export const addPostActionCreator = () => {
+    return {
+        type: 'addPost',
+    };
+};
+
+export const addCurrentPostActionCreator = (currentPost) => {
+    return {
+        type: 'addCurrentPost',
+        currentPost: currentPost,
+    };
+};
+
 export default profileReducer;

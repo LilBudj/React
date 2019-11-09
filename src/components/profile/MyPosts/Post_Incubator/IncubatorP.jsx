@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Incubator.module.css';
-import {addCurrentPostActionCreator, addPostActionCreator} from "../../../../redux/state";
+import {addCurrentPostActionCreator, addPostActionCreator} from "../../../../redux/ProfileReducer";
 
 const Incubator = (props) => {
 

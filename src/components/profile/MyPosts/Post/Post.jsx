@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Post.module.css'
 import Mogol from './../ProfileInfo/Mogol.jpg'
-import {likePressActionCreator} from "../../../../redux/state";
+import {likePressActionCreator} from "../../../../redux/ProfileReducer";
 
 
 const Post = (props) => {
