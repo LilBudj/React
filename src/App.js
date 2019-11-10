@@ -11,16 +11,18 @@ import Settings from "./components/Settings/Settings";
 import Games from "./components/Games/Games";
 
 function App(props) {
+    debugger
   return (
+
       <BrowserRouter>
           <div className="App-wrapper">
               <Header/>
               <Nav friends={props.state.friendsData}/>
               <div>
                   <Route exact path='/Profile' render={ () => <Profile data={props.state.profileData.postData} dispatch={props.dispatch}
-                                                                       currentPost={props.state.profileData.currentValue}/>} />
-                  <Route exact path='/Dialogs' render={ () => <Dialogs currentMessage={props.state.dialogsData.currentMessage} dispatch={props.dispatch}
-                                                                       dialogData={props.state.dialogsData.dialogData} messagesData={props.state.dialogsData.messagesData} />}/>
+                                                                       currentPost={props.state.currentValue}/>} />
+                  <Route exact path='/Dialogs' render={ () => <Dialogs currentMessage={props.state.dialogData.currentMessage} dispatch={props.dispatch}
+                                                                       dialogData={props.state.dialogData.dialogData} messagesData={props.state.dialogData.messagesData} />}/>
                   <Route exact path='/Feed' render={ () => <Feed/>}/>
                   <Route exact path='/Music' render={ () => <Music/>}/>
                   <Route exact path='/Settings' render={ () => <Settings/>}/>

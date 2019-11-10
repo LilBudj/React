@@ -18,7 +18,7 @@ const Incubator = (props) => {
     return(
         <div>
             <div>
-                <textarea ref={newPost} onChange={newValue} value={props.currentPost}> What's new?</textarea>
+                <textarea ref={newPost} onChange={newValue} value={props.currentPost} placeholder="What's new?"></textarea>
             </div>
             <div>
                 <button onClick={AddNewPost}> Post </button>
