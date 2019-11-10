@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Piston.module.css';
 import Thiefs from "./MyPosts/Vors.jpg";
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
-import Incubator from "./MyPosts/Post_Incubator/IncubatorP";
+import Incubator from "./MyPosts/Post_Incubator/PostIncubator";
 import Post from "./MyPosts/Post/Post";
 
 const Piston = () => {

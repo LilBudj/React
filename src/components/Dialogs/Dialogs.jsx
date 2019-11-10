@@ -12,7 +12,7 @@ const Dialogs = (props) => {
     });
 
     let newElement = React.createRef();
-    let Send = () => {
+    let sendMessage = () => {
         props.dispatch(addMessageActionCreator());
     };
 
@@ -29,7 +29,7 @@ const Dialogs = (props) => {
             <div className={style.Dialog_display}>
                 {MessageItems}
                 <textarea ref={newElement} onChange={updateMessageText} value={props.currentMessage}>...</textarea>
-                <button onClick={Send}>Send</button>
+                <button onClick={sendMessage}>Send</button>
             </div>
         </div>
     );

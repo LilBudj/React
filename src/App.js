@@ -11,10 +11,7 @@ import Settings from "./components/Settings/Settings";
 import Games from "./components/Games/Games";
 
 function App(props) {
-    debugger
   return (
-
-      <BrowserRouter>
           <div className="App-wrapper">
               <Header/>
               <Nav friends={props.state.friendsData}/>
@@ -29,7 +26,6 @@ function App(props) {
                   <Route exact path='/Games' render={ () => <Games/>}/>
               </div>
           </div>
-      </BrowserRouter>
   );
 }
 

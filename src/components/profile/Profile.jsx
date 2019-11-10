@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Profile.module.css';
 import Post from './MyPosts/Post/Post';
-import Incubator from "./MyPosts/Post_Incubator/IncubatorP";
+import Incubator from "./MyPosts/Post_Incubator/PostIncubator";
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import Thiefs from './MyPosts/Vors.jpg'
 
