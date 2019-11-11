@@ -1,18 +1,17 @@
 import React from 'react';
 import style from './Incubator.module.css';
-import {addCurrentPostActionCreator, addPostActionCreator} from "../../../../redux/ProfileReducer";
 
 const Incubator = (props) => {
 
     let newPost = React.createRef();
 
     let AddNewPost = () =>{
-        props.dispatch(addPostActionCreator());
+        props.AddNewPost();
     };
 
     let newValue =() => {
         let text = newPost.current.value;
-        props.dispatch(addCurrentPostActionCreator(text));
+        props.newValue(text);
     };
 
     return(

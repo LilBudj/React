@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './Profile.module.css';
 import Post from './MyPosts/Post/Post';
-import Incubator from "./MyPosts/Post_Incubator/PostIncubator";
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import Thiefs from './MyPosts/Vors.jpg'
+import PostIncubatorContainer from "./MyPosts/Post_Incubator/PostIncubatorContainer";
 
 const Profile = (props) =>{
 
@@ -16,7 +16,7 @@ const Profile = (props) =>{
                      alt='content'/>
             </div>
             <ProfileInfo name="Владимир Моголов" status="Вор в законе" age="43" wife="Zona"/>
-            <Incubator dispatch={props.dispatch} addPost={props.addPost} currentPost={props.currentPost} addCurrentValue={props.addCurrentValue}/>
+            <PostIncubatorContainer/>
             {PostElements}
         </section>
     );

@@ -1,4 +1,3 @@
-import React from 'react';
 import {addCurrentPostActionCreator, addPostActionCreator} from "../../../../redux/ProfileReducer";
 import Incubator from "./PostIncubator";
 import {connect} from "react-redux";
