@@ -3,7 +3,7 @@ import style from './Music.module.css';
 
 const Music = () => {
     return(
-        <div>
+        <div className={style.music}>
             Sample Music
         </div>
     )

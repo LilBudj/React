@@ -4,9 +4,9 @@ import Dialog from "./Dialog";
 import Message from "./Message";
 
 const Dialogs = (props) => {
-    let DialogItems = props.dialogData.map((obj) => (<Dialog name={obj.name} id={obj.id} src={obj.src}/>));
+    let DialogItems = props.dialogData.dialogData.map((obj) => (<Dialog name={obj.name} id={obj.id} src={obj.src}/>));
 
-    let MessageItems = props.messagesData.map((obj) => {
+    let MessageItems = props.dialogData.messagesData.map((obj) => {
         return (<Message message={obj.message}/>)
     });
 
@@ -20,6 +20,12 @@ const Dialogs = (props) => {
         props.updateMessageText(newText);
     };
 
+    let sendOnKeyMessage = (e) => {
+        if (e.key === "Enter"){
+            props.sendMessage();
+        }
+    };
+
     return (
         <div className={style.dialogs}>
             <div className={style.DialogList}>
@@ -27,7 +33,8 @@ const Dialogs = (props) => {
             </div>
             <div className={style.Dialog_display}>
                 {MessageItems}
-                <textarea ref={newElement} onChange={updateMessageText} value={props.currentMessage}>...</textarea>
+                <textarea ref={newElement} onKeyPress={sendOnKeyMessage} placeholder="Your message"
+                          onChange={updateMessageText} value={props.dialogData.currentMessage}/>
                 <button onClick={sendMessage}>Send</button>
             </div>
         </div>

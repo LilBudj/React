@@ -2,14 +2,17 @@
     display: grid;
     grid-template-columns: 2fr 8fr;
     margin-right: 30px;
+    height: 100vh;
 }
 
 .DialogList{
     border-style: dashed;
+    height: 60vh;
 }
 
 .Dialog_display{
     border-style: dashed;
+    height: 60vh;
 }
 
 .dialog{

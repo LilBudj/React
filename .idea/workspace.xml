@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post/PostContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post/Post.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Feed/Feed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Feed/Feed.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Feed/Feed.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Feed/Feed.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Games/Games.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Games/Games.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Music/Music.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Music/Music.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Music/Music.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Music/Music.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubatorContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubatorContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/DialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/DialogsReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfileReducer.js" afterDir="false" />
     </list>
@@ -33,7 +38,7 @@
   <component name="ProjectId" id="1SvYpFOkyhwip8LjoHl1bWVqoqK" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,7 +90,8 @@
       <workItem from="1573216761134" duration="1980000" />
       <workItem from="1573220189942" duration="10327000" />
       <workItem from="1573301112101" duration="52000" />
-      <workItem from="1573330954151" duration="20795000" />
+      <workItem from="1573330954151" duration="22793000" />
+      <workItem from="1573584780355" duration="4110000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -164,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573418589715</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Connect [1]">
+      <created>1573504750466</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573504750466</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +207,7 @@
     <MESSAGE value="Action-creator moved to reducer" />
     <MESSAGE value="Redux enabled" />
     <MESSAGE value="Context API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Context API" />
+    <MESSAGE value="Connect [1]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect [1]" />
   </component>
 </project>

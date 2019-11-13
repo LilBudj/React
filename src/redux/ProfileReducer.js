@@ -5,7 +5,7 @@ let initState = {
         {message: "Ты еще сявка - с ворами водку пить!", id: 3, likes: 35},
         {message: "Ты че пялишься, Окунь, а?", id: 4, likes: 8},
     ],
-    currentValue: "...",
+    currentValue: "",
 };
 
 const profileReducer = (state = initState, action) => {
@@ -20,7 +20,6 @@ const profileReducer = (state = initState, action) => {
             stateCopy.postData = [...state.postData];
             stateCopy.postData.push(obj);
             stateCopy.currentValue = '';
-            state.currentValue = '';
             return stateCopy;
         }
 

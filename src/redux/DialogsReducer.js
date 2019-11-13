@@ -3,7 +3,7 @@ let initState = {
         {message: "Delay chto tebe govoryat Mogol", id: '1'},
         {message: "Opystite ego!", id: '2'},
     ],
-    currentMessage: "...",
+    currentMessage: "",
     dialogData: [
         {
             name: "Knyaz",
@@ -33,9 +33,7 @@ const dialogsReducer = (state = initState, action) => {
                 id: state.messagesData.length + 1,
             };
             let stateCopy = {...state};
-            stateCopy.messagesData = [...state.messagesData];
-            stateCopy.messagesData.push(messageObj);
-            state.currentMessage = '';
+            stateCopy.messagesData = [...state.messagesData, messageObj];
             stateCopy.currentMessage = '';
             return stateCopy;
         }

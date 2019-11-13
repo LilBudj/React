@@ -14,10 +14,15 @@ const Incubator = (props) => {
         props.newValue(text);
     };
 
+    let addNewPostOnKey = (e) => {
+        if (e.key === "Enter"){
+            props.AddNewPost();
+        }
+    };
     return(
         <div>
             <div>
-                <textarea ref={newPost} onChange={newValue} value={props.currentPost} placeholder="What's new?"></textarea>
+                <textarea ref={newPost} onKeyPress={addNewPostOnKey} onChange={newValue} value={props.profileData.currentValue} placeholder="What's new?"/>
             </div>
             <div>
                 <button onClick={AddNewPost}> Post </button>

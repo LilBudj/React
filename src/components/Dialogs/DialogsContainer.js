@@ -4,8 +4,7 @@ import Dialogs from "./Dialogs";
 
 let mapStateToProps = (state) => {
   return {
-      dialogData: state.dialogData.dialogData,
-      messagesData: state.dialogData.messagesData
+      dialogData: state.dialogData,
   }
 };
 
