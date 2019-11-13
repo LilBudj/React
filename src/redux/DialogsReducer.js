@@ -32,15 +32,17 @@ const dialogsReducer = (state = initState, action) => {
                 message: state.currentMessage,
                 id: state.messagesData.length + 1,
             };
-            let stateCopy = {...state};
-            stateCopy.messagesData = [...state.messagesData, messageObj];
-            stateCopy.currentMessage = '';
-            return stateCopy;
+            return {
+                ...state,
+                currentMessage: '',
+                messagesData: [...state.messagesData, messageObj]
+            };
         }
         case 'updateCurrentMessage': {
-            let stateCopy = {...state};
-            stateCopy.currentMessage = action.currentMessage;
-            return stateCopy;
+            return {
+                ...state,
+                currentMessage: action.currentMessage
+            };
         }
         default:
             return state;

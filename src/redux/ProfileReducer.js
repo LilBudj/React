@@ -16,21 +16,28 @@ const profileReducer = (state = initState, action) => {
                 id: state.postData.length + 1,
                 likes: 3
             };
-            let stateCopy = {...state};
-            stateCopy.postData = [...state.postData];
-            stateCopy.postData.push(obj);
-            stateCopy.currentValue = '';
+            let stateCopy = {
+                ...state,
+                postData: [...state.postData, obj],
+                currentValue: '',
+            };
             return stateCopy;
         }
 
         case 'addCurrentPost': {
-            let stateCopy = {...state};
-            stateCopy.currentValue = action.currentPost;
+            let stateCopy = {
+                ...state,
+                currentValue: action.currentPost
+            };
             return stateCopy;
         }
         case 'likeCounter': {
-            state.postData[action.id - 1].likes++;
-            return state;
+            let stateCopy = {
+                ...state,
+                postData: [...state.postData],
+            };
+            stateCopy.postData[action.id - 1].likes++;
+            return stateCopy;
         }
         default:
             return state;
