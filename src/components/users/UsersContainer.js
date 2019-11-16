@@ -2,19 +2,21 @@ import {connect} from 'react-redux';
 import {
     followActionCreator,
     setCurrentPageActionCreator, setTotalCountActionCreator,
-    setUsersActionCreator,
+    setUsersActionCreator, toggleFetchingActionCreator,
     unfollowActionCreator
 } from "../../redux/UsersReducer";
 import Users from "./Users";
 import React from "react";
 import * as axios from "axios";
+import Preloader from "../common/preloader/Preloader";
 
 class UsersContainer extends React.Component {
 
     componentDidMount() {
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
             this.props.setUsers(response.data.items);
-            this.props.setTotalCount(response.data.totalCount)
+            this.props.setTotalCount(response.data.totalCount);
+            this.props.toggle();
         });
     }
 
@@ -22,12 +24,14 @@ class UsersContainer extends React.Component {
         this.props.setCurrentPage(page);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`).then(response => {
             this.props.setUsers(response.data.items);
-            this.props.setTotalCount(response.data.totalCount)
+            this.props.setTotalCount(response.data.totalCount);
+            this.props.toggle();
         });
     };
 
     render = () => {
-        return <Users
+        return <>
+            {this.props.isFetching ? <Preloader/> : <Users
             totalCount={this.props.totalUsersCount}
             pageSize={this.props.pageSize}
             currentPage={this.props.currentPage}
@@ -35,7 +39,8 @@ class UsersContainer extends React.Component {
             users={this.props.users}
             unfollow={this.props.unfollow}
             follow={this.props.follow}
-        />
+        />}
+        </>
     }
 }
 
@@ -44,7 +49,8 @@ let mapStateToProps = (state) => {
         users: state.usersData.users,
         pageSize: state.usersData.pageSize,
         totalUsersCount: state.usersData.totalUsersCount,
-        currentPage: state.usersData.currentPage
+        currentPage: state.usersData.currentPage,
+        isFetching: state.usersData.isFetching
     }
 };
 // let mapDispatchToProps = (dispatch) => {
@@ -62,5 +68,6 @@ export default connect(mapStateToProps, {
     unfollow: unfollowActionCreator,
     setUsers: setUsersActionCreator,
     setCurrentPage: setCurrentPageActionCreator,
-    setTotalCount: setTotalCountActionCreator
+    setTotalCount: setTotalCountActionCreator,
+    toggle: toggleFetchingActionCreator
 })(UsersContainer);

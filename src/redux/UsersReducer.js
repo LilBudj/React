@@ -1,8 +1,9 @@
 let initState = {
     users: [],
     totalUsersCount: 0,
-    pageSize: 5,
-    currentPage: 2
+    pageSize: 10,
+    currentPage: 2,
+    isFetching: true
 };
 
 const usersReducer = (state = initState, action) => {
@@ -36,12 +37,17 @@ const usersReducer = (state = initState, action) => {
         }
         case 'setCurrentPage':{
             return {
-                ...state, currentPage: action.page
+                ...state, currentPage: action.page, isFetching: true
             }
         }
         case 'setTotalCount': {
             return {
                 ...state, totalUsersCount: action.totalCount
+            }
+        }
+        case 'toggleFetching': {
+            return{
+                ...state, isFetching: false
             }
         }
         default:
@@ -81,6 +87,12 @@ export const setTotalCountActionCreator = (totalCount) => {
     return {
         type: 'setTotalCount',
         totalCount
+    }
+};
+
+export const toggleFetchingActionCreator = () => {
+    return {
+        type: 'toggleFetching'
     }
 };
 

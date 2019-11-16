@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="Pagination">
+    <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/common/preloader/Preloader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/preloader/Preloader.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/UsersReducer.js" afterDir="false" />
     </list>
@@ -84,7 +85,7 @@
       <workItem from="1573584780355" duration="5695000" />
       <workItem from="1573669361163" duration="1020000" />
       <workItem from="1573710376764" duration="37000" />
-      <workItem from="1573720779617" duration="39152000" />
+      <workItem from="1573720779617" duration="43571000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -191,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573838806413</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Pagination [2]">
+      <created>1573913582087</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573913582087</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +233,7 @@
     <MESSAGE value="Connect [2]" />
     <MESSAGE value="Axios Get" />
     <MESSAGE value="Pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagination" />
+    <MESSAGE value="Pagination [2]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagination [2]" />
   </component>
 </project>
