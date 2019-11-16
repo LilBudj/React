@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
+    <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="Pagination">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Users.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/UsersReducer.js" afterDir="false" />
     </list>
@@ -28,12 +27,12 @@
   <component name="ProjectId" id="1SvYpFOkyhwip8LjoHl1bWVqoqK" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../doggame" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JS" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -85,7 +84,7 @@
       <workItem from="1573584780355" duration="5695000" />
       <workItem from="1573669361163" duration="1020000" />
       <workItem from="1573710376764" duration="37000" />
-      <workItem from="1573720779617" duration="26777000" />
+      <workItem from="1573720779617" duration="39152000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -185,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573822226552</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Pagination">
+      <created>1573838806413</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573838806413</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +224,7 @@
     <MESSAGE value="Connect [1]" />
     <MESSAGE value="Connect [2]" />
     <MESSAGE value="Axios Get" />
-    <option name="LAST_COMMIT_MESSAGE" value="Axios Get" />
+    <MESSAGE value="Pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagination" />
   </component>
 </project>

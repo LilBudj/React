@@ -3,12 +3,12 @@ import style from './Users.module.css'
 import defaultPhoto from './../profile/MyPosts/ProfileInfo/russians.jpg'
 
 const Users = (props) => {
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let pagesCount = Math.ceil(props.totalCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= (pagesCount); i++) {
         pages.push(i);
     }
-    let pageArray = pages.map(p => {
+    let pageArray = pages.map((p) => {
         return <span className={(props.currentPage === p) && style.active}
                      onClick={() => {
                          props.setPage(p)

@@ -18,20 +18,20 @@ class UsersContainer extends React.Component {
         });
     }
 
-    setPage(page) {
+    setPage(page){
         this.props.setCurrentPage(page);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`).then(response => {
             this.props.setUsers(response.data.items);
             this.props.setTotalCount(response.data.totalCount)
         });
-    }
+    };
 
     render = () => {
         return <Users
             totalCount={this.props.totalUsersCount}
             pageSize={this.props.pageSize}
             currentPage={this.props.currentPage}
-            setPage={this.props.setPage}
+            setPage={this.setPage.bind(this)}
             users={this.props.users}
             unfollow={this.props.unfollow}
             follow={this.props.follow}
@@ -47,14 +47,20 @@ let mapStateToProps = (state) => {
         currentPage: state.usersData.currentPage
     }
 };
-let mapDispatchToProps = (dispatch) => {
-    return{
-        follow: (userId) => {dispatch(followActionCreator(userId))},
-        unfollow: (userId) => {dispatch(unfollowActionCreator(userId))},
-        setUsers: (users) => {dispatch(setUsersActionCreator(users))},
-        setCurrentPage: (page) => {dispatch(setCurrentPageActionCreator(page))},
-        setTotalCount: (totalCount) =>{dispatch(setTotalCountActionCreator(totalCount))}
-    }
-};
+// let mapDispatchToProps = (dispatch) => {
+//     return{
+//         follow: (userId) => {dispatch(followActionCreator(userId))},
+//         unfollow: (userId) => {dispatch(unfollowActionCreator(userId))},
+//         setUsers: (users) => {dispatch(setUsersActionCreator(users))},
+//         setCurrentPage: (page) => {dispatch(setCurrentPageActionCreator(page))},
+//         setTotalCount: (totalCount) =>{dispatch(setTotalCountActionCreator(totalCount))}
+//     }
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, {
+    follow: followActionCreator,
+    unfollow: unfollowActionCreator,
+    setUsers: setUsersActionCreator,
+    setCurrentPage: setCurrentPageActionCreator,
+    setTotalCount: setTotalCountActionCreator
+})(UsersContainer);
