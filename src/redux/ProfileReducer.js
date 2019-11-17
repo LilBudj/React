@@ -1,4 +1,5 @@
 let initState = {
+    profile: null,
     postData: [
         {message: "Расход мужики", id: 1, likes: 4},
         {message: "Ты хорошо подумал, Калган? Или может ты отсюда на рывок надеешься?", id: 2, likes: 25},
@@ -39,6 +40,11 @@ const profileReducer = (state = initState, action) => {
             stateCopy.postData[action.id - 1].likes++;
             return stateCopy;
         }
+        case 'setProfile': {
+            return{
+                ...state, profile: action.profile
+            }
+        }
         default:
             return state;
     }
@@ -62,6 +68,13 @@ export const addCurrentPostActionCreator = (currentPost) => {
         type: 'addCurrentPost',
         currentPost: currentPost,
     };
+};
+
+export const setProfileActionCreator = (profile) => {
+    return {
+        type: 'setProfile',
+        profile
+    }
 };
 
 export default profileReducer;

@@ -1,15 +1,18 @@
 import React from 'react';
 import hearts from './octagon.png';
 import style from './Header.module.css';
+import {NavLink} from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
 return (
     <header className={style.header}>
         <img src={hearts} className={style.AppLogo} alt="network logo"/>
         ВХате
         <span className={style.Login}>
+            { props.isAuth? <span>{props.photo} {props.login}</span>:<span>
+            <NavLink to={'/login'}><button> Проходи </button></NavLink>
             <button> Первоход? </button>
-            <button> Проходи </button>
+        </span>}
         </span>
     </header>
 );

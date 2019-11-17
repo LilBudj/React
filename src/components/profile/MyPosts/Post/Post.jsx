@@ -7,13 +7,13 @@ import {likePressActionCreator} from "../../../../redux/ProfileReducer";
 const Post = (props) => {
 
     let likePress = () => {
-        props.dispatch(likePressActionCreator(props.id));
+        props.likePress(props.id);
     };
-
+debugger
     return(
         <div className={style.item}>
             <img
-                src={Mogol} className={style.icon} alt='icon'/>
+                src={props.photo} className={style.icon} alt='icon'/>
             {props.message}
             <div>
                 <button onClick={likePress}> Like</button>

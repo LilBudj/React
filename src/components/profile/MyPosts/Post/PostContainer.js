@@ -4,7 +4,8 @@ import Post from "./Post";
 
 let mapStatetoProps = (state) => {
     return {
-        postData: state.postData
+        postData: state.postData,
+        photo: state.profile.photos.small
     }
 };
 

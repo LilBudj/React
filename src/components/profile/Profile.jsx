@@ -4,22 +4,32 @@ import Post from './MyPosts/Post/Post';
 import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import Thiefs from './MyPosts/Vors.jpg'
 import PostIncubatorContainer from "./MyPosts/Post_Incubator/PostIncubatorContainer";
+import Preloader from "../common/preloader/Preloader";
 
-const Profile = (props) =>{
+const Profile = (props) => {
 
-    let PostElements = props.data.map((obj) => (<Post message={obj.message} likes={obj.likes} id={obj.id} dispatch={props.dispatch}/>));
-
-    return(
-        <section className={style.content}>
-            <div>
-                <img src={Thiefs} className={style.contentImg}
-                     alt='content'/>
-            </div>
-            <ProfileInfo name="Владимир Моголов" status="Вор в законе" age="43" wife="Zona"/>
-            <PostIncubatorContainer/>
-            {PostElements}
-        </section>
-    );
+    if (!props.profile) {
+        return (
+            <Preloader/>
+        )
+    } else {
+        let PostElements = props.data.map((obj) => (<Post photo={props.profile.photos.small}
+                                                          message={obj.message} likes={obj.likes} id={obj.id}
+                                                          likePress={props.likePress}/>));
+        return (
+            <section className={style.content}>
+                <div>
+                    <img src={Thiefs} className={style.contentImg}
+                         alt='content'/>
+                </div>
+                <ProfileInfo name={props.profile.fullName} status={props.profile.status} age={props.profile.userId}
+                             wife={props.profile.lookingForAJobDescription} contacts={props.profile.contacts}
+                             photo={props.profile.photos.large}/>
+                <PostIncubatorContainer/>
+                {PostElements}
+            </section>
+        );
+    }
 };
 
 export default Profile
