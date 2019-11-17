@@ -6,7 +6,7 @@ const ProfileInfo = (props) => {
 
     return (
         <div className={style.profileInfo}>
-            <img src={props.photo} className={style.ava} alt='Avatar picture'/>
+            <img src={!props.photo?Mogol:props.photo} className={style.ava} alt='Avatar picture'/>
             <div className={style.info}>
                 <h1> {props.name} </h1>
                 <p> {props.status} </p>

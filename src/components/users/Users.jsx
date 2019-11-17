@@ -2,6 +2,7 @@ import React from 'react'
 import style from './Users.module.css'
 import defaultPhoto from './../profile/MyPosts/ProfileInfo/russians.jpg'
 import {NavLink} from "react-router-dom";
+import * as axios from "axios";
 
 const Users = (props) => {
     let pagesCount = Math.ceil(props.totalCount / props.pageSize);
@@ -28,10 +29,32 @@ const Users = (props) => {
                     <div>
                         {u.followed ?
                             <button onClick={() => {
-                                props.unfollow(u.id)
+                                axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                                    {
+                                        withCredentials: true,
+                                        headers: {
+                                            "API-KEY": "eff497f9-01d2-4ce0-9eeb-0f0ceceb2a93"
+                                        }
+                                    },
+                                ).then(response => {
+                                    if (response.data.resultCode === 0){
+                                        props.unfollow(u.id);
+                                    }
+                                });
                             }}>Unfollow</button>
                             : <button onClick={() => {
-                                props.follow(u.id)
+                                axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {},
+                                    {
+                                        withCredentials: true,
+                                        headers: {
+                                            "API-KEY": "eff497f9-01d2-4ce0-9eeb-0f0ceceb2a93"
+                                        }
+                                    }
+                                    ).then(response => {
+                                    if (response.data.resultCode === 0){
+                                        props.follow(u.id);
+                                    }
+                                });
                             }}>Follow</button>}
                     </div>
                 </span>
@@ -50,4 +73,4 @@ const Users = (props) => {
     )
 };
 
-export default Users
+export default Users;
