@@ -7,6 +7,7 @@ import {
     likePressActionCreator, getProfileThunkCreator
 } from "../../redux/ProfileReducer";
 import {withRouter} from "react-router-dom";
+import {RedirectContainer} from "../common/redirect/RedirectContainer";
 
 class ProfileContainer extends React.Component{
 
@@ -19,8 +20,9 @@ class ProfileContainer extends React.Component{
     }
 
     render =() => {
+        const RedirectProfileContainer = RedirectContainer(Profile, this.props.isAuth);
             return (
-                <Profile {...this.props}/>
+                <RedirectProfileContainer {...this.props}/>
             )
     }
 }
@@ -30,6 +32,7 @@ let mapStateToProps = (state)=>{
         profile: state.profileData.profile,
         data: state.profileData.postData,
         currentPost: state.currentValue,
+        isAuth: state.auth.isAuth
     }
 };
 
