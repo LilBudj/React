@@ -1,3 +1,5 @@
+import {authAPI} from "../API/api";
+
 let initState = {
     login: null,
     email: null,
@@ -42,17 +44,26 @@ export const setUserDataActionCreator = (userId, email, login) => {
         }
     };
 };
-
 export const toggleFetchingActionCreator = () => {
     return {
         type: 'toggleFetching'
     }
 };
-
 export const setUserPhotoActionCreator = (photo) => {
     return {
         type: 'setUserPhoto',
         photo
+    }
+};
+
+export const setUserDataThunkCreator = () => {
+    return (dispatch) => {
+        authAPI.getAuthData().then(data => {
+            if (data.resultCode === 0) {
+                dispatch(setUserDataActionCreator(data.data.id, data.data.email, data.data.login));
+            }
+            dispatch(toggleFetchingActionCreator());
+        });
     }
 };
 

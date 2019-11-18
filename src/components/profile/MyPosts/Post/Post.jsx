@@ -9,7 +9,6 @@ const Post = (props) => {
     let likePress = () => {
         props.likePress(props.id);
     };
-debugger
     return(
         <div className={style.item}>
             <img

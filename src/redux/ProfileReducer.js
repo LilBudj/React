@@ -1,3 +1,5 @@
+import {profileAPI} from "../API/api";
+
 let initState = {
     profile: null,
     postData: [
@@ -49,31 +51,35 @@ const profileReducer = (state = initState, action) => {
             return state;
     }
 };
-
 export const likePressActionCreator = (id) => {
     return {
         type: 'likeCounter',
         id: id,
     };
 };
-
 export const addPostActionCreator = () => {
     return {
         type: 'addPost',
     };
 };
-
 export const addCurrentPostActionCreator = (currentPost) => {
     return {
         type: 'addCurrentPost',
         currentPost: currentPost,
     };
 };
-
 export const setProfileActionCreator = (profile) => {
     return {
         type: 'setProfile',
         profile
+    }
+};
+
+export const getProfileThunkCreator = (id) => {
+    return (dispatch) => {
+        profileAPI.getProfile(id).then(data => {
+            dispatch(setProfileActionCreator(data));
+        });
     }
 };
 

@@ -4,10 +4,8 @@ import Profile from "./Profile";
 import {
     addCurrentPostActionCreator,
     addPostActionCreator,
-    setProfileActionCreator,
-    likePressActionCreator
+    likePressActionCreator, getProfileThunkCreator
 } from "../../redux/ProfileReducer";
-import * as axios from "axios";
 import {withRouter} from "react-router-dom";
 
 class ProfileContainer extends React.Component{
@@ -17,9 +15,7 @@ class ProfileContainer extends React.Component{
         if (!userId) {
             userId = 5189
         }
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
-            this.props.setProfile(response.data);
-        });
+            this.props.setProfile(userId)
     }
 
     render =() => {
@@ -43,5 +39,5 @@ export default connect(mapStateToProps, {
     AddNewPost: addPostActionCreator,
     newValue: addCurrentPostActionCreator,
     likePress: likePressActionCreator,
-    setProfile: setProfileActionCreator
+    setProfile: getProfileThunkCreator
 })(ProfileURLContainer);
