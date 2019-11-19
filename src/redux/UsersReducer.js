@@ -67,36 +67,11 @@ const usersReducer = (state = initState, action) => {
     }
 };
 
-export const followActionCreator = (userId) => {
-    return {
-        type: 'follow',
-        userId
-    };
-};
-export const unfollowActionCreator = (userId) => {
-    return {
-        type: 'unfollow',
-        userId
-    };
-};
-export const setUsersActionCreator = (users) => {
-return {
-    type: 'setUsers',
-    users
-}
-};
-export const setCurrentPageActionCreator = (page) => {
-    return {
-        type: 'setCurrentPage',
-        page
-    }
-};
-export const setTotalCountActionCreator = (totalCount) => {
-    return {
-        type: 'setTotalCount',
-        totalCount
-    }
-};
+export const followActionCreator = (userId) => ({type: 'follow', userId});
+export const unfollowActionCreator = (userId) => ({type: 'unfollow', userId});
+export const setUsersActionCreator = (users) => ({type: 'setUsers', users});
+export const setCurrentPageActionCreator = (page) => ({type: 'setCurrentPage', page});
+export const setTotalCountActionCreator = (totalCount) => ({type: 'setTotalCount', totalCount});
 export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
 export const toggleFollowingProgressActionCreator = (isFetching, followId) => ({type: 'toggleFollowingProgress', isFetching, followId});
 

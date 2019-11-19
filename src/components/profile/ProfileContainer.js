@@ -4,10 +4,11 @@ import Profile from "./Profile";
 import {
     addCurrentPostActionCreator,
     addPostActionCreator,
-    likePressActionCreator, getProfileThunkCreator
+    likePressActionCreator, getProfileThunkCreator, getStatusThunkCreator, putStatusThunkCreator
 } from "../../redux/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {RedirectContainer} from "../common/redirect/RedirectContainer";
+import {compose} from "redux";
 
 class ProfileContainer extends React.Component{
 
@@ -16,13 +17,13 @@ class ProfileContainer extends React.Component{
         if (!userId) {
             userId = 5189
         }
-            this.props.setProfile(userId)
+            this.props.setProfile(userId);
+        this.props.getStatus(userId)
     }
 
     render =() => {
-        const RedirectProfileContainer = RedirectContainer(Profile, this.props.isAuth);
             return (
-                <RedirectProfileContainer {...this.props}/>
+                <Profile {...this.props}/>
             )
     }
 }
@@ -32,15 +33,20 @@ let mapStateToProps = (state)=>{
         profile: state.profileData.profile,
         data: state.profileData.postData,
         currentPost: state.currentValue,
-        isAuth: state.auth.isAuth
+        isAuth: state.auth.isAuth,
+        status: state.profileData.status
     }
 };
 
-const ProfileURLContainer = withRouter(ProfileContainer);
-
-export default connect(mapStateToProps, {
-    AddNewPost: addPostActionCreator,
-    newValue: addCurrentPostActionCreator,
-    likePress: likePressActionCreator,
-    setProfile: getProfileThunkCreator
-})(ProfileURLContainer);
+export default compose(
+    connect(mapStateToProps, {
+        AddNewPost: addPostActionCreator,
+        newValue: addCurrentPostActionCreator,
+        likePress: likePressActionCreator,
+        setProfile: getProfileThunkCreator,
+        getStatus: getStatusThunkCreator,
+        putStatus: putStatusThunkCreator
+    }),
+    withRouter,
+    RedirectContainer
+)(ProfileContainer);

@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './Music.module.css';
+import {RedirectContainer} from "../common/redirect/RedirectContainer";
+import {compose} from "redux";
 
 const Music = () => {
     return(
@@ -9,4 +11,6 @@ const Music = () => {
     )
 };
 
-export default Music
+export default compose(
+    RedirectContainer
+)(Music)

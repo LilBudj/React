@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './Settings.module.css'
+import {compose} from "redux";
+import {RedirectContainer} from "../common/redirect/RedirectContainer";
 
 const Settings =() => {
     return(
@@ -9,4 +11,6 @@ const Settings =() => {
     )
 };
 
-export default Settings
+export default compose(
+    RedirectContainer
+)(Settings);

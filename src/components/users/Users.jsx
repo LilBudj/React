@@ -9,10 +9,11 @@ const Users = (props) => {
     for (let i = 1; i <= (pagesCount); i++) {
         pages.push(i);
     }
-    let pageArray = pages.map((p) => {
+    let pageArray = pages.map(p => {
         return <span className={(props.currentPage === p) ? style.active : ""}
                      onClick={() => {
-                         props.setPage(p)
+                         props.setPage(p);
+                         props.setCurrentPage(p)
                      }}>{p}  </span>
     });
     return (

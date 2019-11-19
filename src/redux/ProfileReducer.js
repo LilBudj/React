@@ -9,6 +9,7 @@ let initState = {
         {message: "Ты че пялишься, Окунь, а?", id: 4, likes: 8},
     ],
     currentValue: "",
+    status: ".."
 };
 
 const profileReducer = (state = initState, action) => {
@@ -19,20 +20,18 @@ const profileReducer = (state = initState, action) => {
                 id: state.postData.length + 1,
                 likes: 3
             };
-            let stateCopy = {
+            return {
                 ...state,
                 postData: [...state.postData, obj],
                 currentValue: '',
             };
-            return stateCopy;
         }
 
         case 'addCurrentPost': {
-            let stateCopy = {
+            return {
                 ...state,
                 currentValue: action.currentPost
-            };
-            return stateCopy;
+            };;
         }
         case 'likeCounter': {
             let stateCopy = {
@@ -47,39 +46,43 @@ const profileReducer = (state = initState, action) => {
                 ...state, profile: action.profile
             }
         }
+        case 'setStatus': {
+            return{
+                ...state, status: action.status
+            }
+        }
         default:
             return state;
     }
 };
-export const likePressActionCreator = (id) => {
-    return {
-        type: 'likeCounter',
-        id: id,
-    };
-};
-export const addPostActionCreator = () => {
-    return {
-        type: 'addPost',
-    };
-};
-export const addCurrentPostActionCreator = (currentPost) => {
-    return {
-        type: 'addCurrentPost',
-        currentPost: currentPost,
-    };
-};
-export const setProfileActionCreator = (profile) => {
-    return {
-        type: 'setProfile',
-        profile
-    }
-};
+export const likePressActionCreator = (id) => ({type: 'likeCounter', id: id});
+export const addPostActionCreator = () => ({type: 'addPost',});
+export const addCurrentPostActionCreator = (currentPost) => ({type: 'addCurrentPost', currentPost: currentPost,});
+export const setProfileActionCreator = (profile) => ({type: 'setProfile', profile});
+export const setStatusActionCreator = (status) => ({type: 'setStatus', status});
 
 export const getProfileThunkCreator = (id) => {
     return (dispatch) => {
         profileAPI.getProfile(id).then(data => {
             dispatch(setProfileActionCreator(data));
         });
+    }
+};
+export const getStatusThunkCreator = (id) => {
+    return (dispatch) => {
+        profileAPI.getStatus(id).then(data => {
+            dispatch(setStatusActionCreator(data))
+        })
+    }
+};
+export const putStatusThunkCreator = (status) => {
+    return (dispatch) => {
+        profileAPI.setStatus(status).then( response => {
+            if (response.data.resultCode === 0){
+                debugger
+                dispatch(setStatusActionCreator(status))
+            }
+        })
     }
 };
 

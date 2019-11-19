@@ -34,27 +34,9 @@ const authReducer = (state = initState, action) => {
     }
 };
 
-export const setUserDataActionCreator = (userId, email, login) => {
-    return {
-        type: 'setUser',
-        data: {
-            email,
-            userId,
-            login
-        }
-    };
-};
-export const toggleFetchingActionCreator = () => {
-    return {
-        type: 'toggleFetching'
-    }
-};
-export const setUserPhotoActionCreator = (photo) => {
-    return {
-        type: 'setUserPhoto',
-        photo
-    }
-};
+export const setUserDataActionCreator = (userId, email, login) => ({type: 'setUser', data: {email, userId, login}});
+export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
+export const setUserPhotoActionCreator = (photo) => ({type: 'setUserPhoto', photo});
 
 export const setUserDataThunkCreator = () => {
     return (dispatch) => {

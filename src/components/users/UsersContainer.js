@@ -25,6 +25,7 @@ class UsersContainer extends React.Component {
             totalCount={this.props.totalUsersCount}
             pageSize={this.props.pageSize}
             currentPage={this.props.currentPage}
+            setCurrentPage={this.props.setCurrentPage}
             setPage={this.setPage.bind(this)}
             users={this.props.users}
             unfollow={this.props.unfollow}

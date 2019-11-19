@@ -22,9 +22,9 @@ const Profile = (props) => {
                     <img src={Thiefs} className={style.contentImg}
                          alt='content'/>
                 </div>
-                <ProfileInfo name={props.profile.fullName} status={props.profile.status} age={props.profile.userId}
-                             wife={props.profile.lookingForAJobDescription} contacts={props.profile.contacts}
-                             photo={props.profile.photos.large}/>
+                <ProfileInfo name={props.profile.fullName} age={props.profile.userId} wife={props.profile.lookingForAJobDescription}
+                             contacts={props.profile.contacts} status={props.status}
+                             photo={props.profile.photos.large} getStatus={props.getStatus} putStatus={props.putStatus}/>
                 <PostIncubatorContainer/>
                 {PostElements}
             </section>

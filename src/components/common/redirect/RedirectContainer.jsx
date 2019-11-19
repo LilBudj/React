@@ -1,10 +1,17 @@
 import React from 'react'
 import {Redirect} from "react-router-dom";
+import {connect} from "react-redux";
 
-export const RedirectContainer = (ComponentName, isAuth) => {
-  return class extends React.Component{
+let mapStateToProps = (state) => {
+    return {
+        isAuth: state.auth.isAuth
+    }
+};
+
+export const RedirectContainer = (ComponentName) => {
+  class FirstContainer extends React.Component{
       render = () => {
-          if (!isAuth) {
+          if (!this.props.isAuth) {
               return(<Redirect to={'/login'}/>)
           }
           return(<>
@@ -13,4 +20,5 @@ export const RedirectContainer = (ComponentName, isAuth) => {
           )
       }
   }
+  return connect(mapStateToProps)(FirstContainer)
 };

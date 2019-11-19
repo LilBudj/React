@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './ProfileInfo.module.css';
 import Mogol from "./Mogol.jpg";
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
 
@@ -9,7 +10,7 @@ const ProfileInfo = (props) => {
             <img src={!props.photo?Mogol:props.photo} className={style.ava} alt='Avatar picture'/>
             <div className={style.info}>
                 <h1> {props.name} </h1>
-                <p> {props.status} </p>
+                <ProfileStatus status={props.status} putStatus={props.putStatus}/>
                 <div className={style.directInfo}>
                     <p> Id: {props.age}</p>
                     <p> {props.wife}</p>
