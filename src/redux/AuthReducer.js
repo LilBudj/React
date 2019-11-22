@@ -15,7 +15,6 @@ const authReducer = (state = initState, action) => {
             return {
                 ...state,
                ...action.data,
-                isAuth: true
             };
         }
         case 'setUserPhoto': {
@@ -34,18 +33,40 @@ const authReducer = (state = initState, action) => {
     }
 };
 
-export const setUserDataActionCreator = (userId, email, login) => ({type: 'setUser', data: {email, userId, login}});
+export const setUserDataActionCreator = (userId, email, login, isAuth) => ({type: 'setUser', data: {email, userId, login, isAuth}});
 export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
 export const setUserPhotoActionCreator = (photo) => ({type: 'setUserPhoto', photo});
 
 export const setUserDataThunkCreator = () => {
+    debugger
     return (dispatch) => {
         authAPI.getAuthData().then(data => {
+            debugger
             if (data.resultCode === 0) {
-                dispatch(setUserDataActionCreator(data.data.id, data.data.email, data.data.login));
+                debugger
+                dispatch(setUserDataActionCreator(data.data.id, data.data.email, data.data.login, true));
             }
             dispatch(toggleFetchingActionCreator());
         });
+    }
+};
+export const authLoginThunkCreator = (loginInfo) => {
+    return (dispatch) => {
+        authAPI.authLogin(loginInfo.email, loginInfo.password, loginInfo.rememberMe).then(data => {
+            if (data.resultCode === 0) {
+                dispatch(setUserDataThunkCreator())
+            }
+        })
+    }
+};
+
+export const authLogoutThunkCreator = () => {
+    return (dispatch) => {
+        authAPI.authLogout().then(data => {
+            if (data.resultCode === 0) {
+                dispatch(setUserDataActionCreator(null, null, null, false))
+            }
+        })
     }
 };
 

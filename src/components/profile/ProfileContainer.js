@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Profile from "./Profile";
 import {
-    addCurrentPostActionCreator,
     addPostActionCreator,
     likePressActionCreator, getProfileThunkCreator, getStatusThunkCreator, putStatusThunkCreator
 } from "../../redux/ProfileReducer";
@@ -32,7 +31,6 @@ let mapStateToProps = (state)=>{
     return {
         profile: state.profileData.profile,
         data: state.profileData.postData,
-        currentPost: state.currentValue,
         isAuth: state.auth.isAuth,
         status: state.profileData.status
     }
@@ -41,7 +39,6 @@ let mapStateToProps = (state)=>{
 export default compose(
     connect(mapStateToProps, {
         AddNewPost: addPostActionCreator,
-        newValue: addCurrentPostActionCreator,
         likePress: likePressActionCreator,
         setProfile: getProfileThunkCreator,
         getStatus: getStatusThunkCreator,

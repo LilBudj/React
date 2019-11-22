@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Header from "./Header";
 import {
+    authLogoutThunkCreator,
     setUserDataThunkCreator,
     setUserPhotoActionCreator,
     toggleFetchingActionCreator
@@ -33,7 +34,7 @@ let mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
         isFetching: state.auth.isFetching,
         login: state.auth.login,
-        photo: state.auth.photo
+        photo: !state.profileData.profile?null:state.profileData.profile.photos.small
     }
 };
 
@@ -41,4 +42,5 @@ export default connect (mapStateToProps, {
     setUserData: setUserDataThunkCreator,
     toggle: toggleFetchingActionCreator,
     setUserPhoto: setUserPhotoActionCreator,
+    authLogout: authLogoutThunkCreator
 })(HeaderContainer)

@@ -7,14 +7,15 @@ import PostIncubatorContainer from "./MyPosts/Post_Incubator/PostIncubatorContai
 import Preloader from "../common/preloader/Preloader";
 
 const Profile = (props) => {
-
     if (!props.profile) {
         return (
             <Preloader/>
         )
     } else {
         let PostElements = props.data.map((obj) => (<Post photo={props.profile.photos.small}
-                                                          message={obj.message} likes={obj.likes} id={obj.id}
+                                                          message={obj.message} likes={obj.likes}
+                                                          id={obj.id}
+                                                          key={obj.id}
                                                           likePress={props.likePress}/>));
         return (
             <section className={style.content}>

@@ -4,11 +4,14 @@ import {NavLink} from 'react-router-dom';
 
 const Nav = (props) => {
 
-    let FriendsBlock = props.friends.map((obj) => (<div><img src={obj.src} className={style.photo} alt="sample"/>
-            <div>{obj.name}</div></div>
-        ));
+    let FriendsBlock = props.friends.map((obj, index) => {
+        return <div key={index}>
+            <img src={obj.src} className={style.photo} alt="sample"/>
+            <div>{obj.name}</div>
+        </div>
+       })
 
-        return(
+    return(
         <div className={style.nav}>
             <ul>
                 <li><NavLink to='/Profile' activeClassName={style.aitem} className={style.item}> Profile</NavLink></li>

@@ -54,12 +54,11 @@ const usersReducer = (state = initState, action) => {
             }
         }
         case 'toggleFollowingProgress': {
-            debugger
             return {
                 ...state,
                 followingInProgress: action.isFetching ?
                     [...state.followingInProgress,action.followId ] :
-                    state.followingInProgress.filter(id => id != action.followId)
+                    state.followingInProgress.filter(id => id !== action.followId)
             }
         }
         default:

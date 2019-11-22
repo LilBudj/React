@@ -58,8 +58,13 @@ export const authAPI = {
             return response.data
         })
     },
-    authLogin(loginInfo) {
-        return instance.post(`auth/login`, loginInfo). then(response => {
+    authLogin(email, password, rememberMe) {
+        return instance.post(`auth/login`, {email, password, rememberMe}). then(response => {
+            return response.data
+        })
+    },
+    authLogout(){
+        return instance.delete(`auth/login`).then(response => {
             return response.data
         })
     }

@@ -29,7 +29,7 @@ const dialogsReducer = (state = initState, action) => {
 
         case 'addMessage': {
             let messageObj = {
-                message: state.currentMessage,
+                message: action.message,
                 id: state.messagesData.length + 1,
             };
             return {
@@ -38,18 +38,11 @@ const dialogsReducer = (state = initState, action) => {
                 messagesData: [...state.messagesData, messageObj]
             };
         }
-        case 'updateCurrentMessage': {
-            return {
-                ...state,
-                currentMessage: action.currentMessage
-            };
-        }
         default:
             return state;
     }
 };
 
-export const addMessageActionCreator = () => ({type: 'addMessage',});
-export const updateCurrentMessageActionCreator = (currentMessage) => ({type: 'updateCurrentMessage', currentMessage: currentMessage,});
+export const addMessageActionCreator = (message) => ({type: 'addMessage', message});
 
 export default dialogsReducer;

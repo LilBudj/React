@@ -1,32 +1,34 @@
 import React from 'react';
 import style from './Incubator.module.css';
+import {Field, reduxForm} from "redux-form"
+import {maxLengthCreator, required} from "../../../../utils/validators/Validators";
+import {Textarea} from "../../../common/formControls/FormControls";
+
+let maxLength = maxLengthCreator(30);
+
+function ProfileForm(props) {
+    return <>
+        <form onSubmit={props.handleSubmit}>
+        <div>
+            <Field name="post" placeholder="What's new?" component={Textarea} validate={[required, maxLength]}/>
+        </div>
+        <div>
+            <button> Post</button>
+        </div>
+        </form>
+    </>;
+}
+
+const ReduxProfileForm = reduxForm({form: 'profile-add-post'})(ProfileForm);
 
 const Incubator = (props) => {
-
-    let newPost = React.createRef();
-
-    let AddNewPost = () =>{
-        props.AddNewPost();
+    let onSubmit = (formData) =>{
+        props.AddNewPost(formData.post);
     };
 
-    let newValue =() => {
-        let text = newPost.current.value;
-        props.newValue(text);
-    };
-
-    let addNewPostOnKey = (e) => {
-        if (e.key === "Enter"){
-            props.AddNewPost();
-        }
-    };
     return(
         <div>
-            <div>
-                <textarea ref={newPost} onKeyPress={addNewPostOnKey} onChange={newValue} value={props.profileData.currentValue} placeholder="What's new?"/>
-            </div>
-            <div>
-                <button onClick={AddNewPost}> Post </button>
-            </div>
+            <ReduxProfileForm onSubmit={onSubmit}/>
         </div>
     );
 };

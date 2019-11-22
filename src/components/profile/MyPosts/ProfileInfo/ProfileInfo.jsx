@@ -4,7 +4,6 @@ import Mogol from "./Mogol.jpg";
 import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
-
     return (
         <div className={style.profileInfo}>
             <img src={!props.photo?Mogol:props.photo} className={style.ava} alt='Avatar picture'/>
