@@ -7,6 +7,7 @@ import {maxLengthCreator, required} from "../../utils/validators/Validators";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 
+
 const maxLength = maxLengthCreator(25);
 
 const LoginForm = (props) => {
@@ -21,6 +22,9 @@ const LoginForm = (props) => {
             <div>
                 <Field type={'checkbox'} name={'rememberMe'} component={'input'}/> remember me
             </div>
+            {props.error && <div className={style.error}>
+                {props.error}
+            </div>}
             <div>
                 <button>Login</button>
             </div>

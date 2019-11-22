@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/formControls/FormControl.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/formControls/FormControls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validators/Validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/formControls/FormControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/formControls/FormControl.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubatorContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/Post_Incubator/PostIncubatorContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/DialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/DialogsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/FriendsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/FriendsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/UsersReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +93,7 @@
       <workItem from="1573720779617" duration="95871000" />
       <workItem from="1574179058477" duration="12416000" />
       <workItem from="1574269563782" duration="9605000" />
-      <workItem from="1574349795259" duration="18467000" />
+      <workItem from="1574349795259" duration="20809000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -264,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574281115343</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Login Flow">
+      <created>1574452316766</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1574452316766</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +297,7 @@
     <MESSAGE value="Redux - Thunk" />
     <MESSAGE value="Redirect HOC [1]" />
     <MESSAGE value="Login API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login API" />
+    <MESSAGE value="Login Flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Flow" />
   </component>
 </project>
