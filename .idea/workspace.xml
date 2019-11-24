@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/UsersReselectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatusHooks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +27,7 @@
   <component name="ProjectId" id="1SvYpFOkyhwip8LjoHl1bWVqoqK" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -35,12 +36,13 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JSprojects\01\React\src\redux" />
-      <recent name="D:\JSprojects\01\React\src\components\profile\MyPosts\Post_Incubator" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JSprojects\01\React\src\components\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JSprojects\01\React\src\components\profile\MyPosts\ProfileInfo" />
+      <recent name="D:\JSprojects\01\React\src\redux" />
+      <recent name="D:\JSprojects\01\React\src\components\profile\MyPosts\Post_Incubator" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,7 +94,7 @@
       <workItem from="1574269563782" duration="9605000" />
       <workItem from="1574349795259" duration="23018000" />
       <workItem from="1574508186984" duration="73000" />
-      <workItem from="1574606894913" duration="5366000" />
+      <workItem from="1574606894913" duration="10981000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -269,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574610690487</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="demo reselectors">
+      <created>1574613766831</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1574613766831</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +322,7 @@
     <MESSAGE value="Login Flow" />
     <MESSAGE value="stopSubmit" />
     <MESSAGE value="App initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="App initialization" />
+    <MESSAGE value="demo reselectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo reselectors" />
   </component>
 </project>
