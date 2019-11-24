@@ -4,15 +4,17 @@ import Header from "./Header";
 import {
     authLogoutThunkCreator,
     setUserDataThunkCreator,
-    setUserPhotoActionCreator,
+    setUserPhotoActionCreator, setUserPhotoThunkCreator,
     toggleFetchingActionCreator
 } from "../../redux/AuthReducer";
 import Preloader from "../common/preloader/Preloader";
+import {getProfileThunkCreator} from "../../redux/ProfileReducer";
 
 class HeaderContainer extends React.Component{
 
     componentDidMount() {
             this.props.setUserData()
+
     }
 
     render = () => {
@@ -34,13 +36,13 @@ let mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
         isFetching: state.auth.isFetching,
         login: state.auth.login,
-        photo: !state.profileData.profile?null:state.profileData.profile.photos.small
+        id: state.auth.userId
     }
 };
 
 export default connect (mapStateToProps, {
     setUserData: setUserDataThunkCreator,
     toggle: toggleFetchingActionCreator,
-    setUserPhoto: setUserPhotoActionCreator,
-    authLogout: authLogoutThunkCreator
+    setUserPhoto: setUserPhotoThunkCreator,
+    authLogout: authLogoutThunkCreator,
 })(HeaderContainer)

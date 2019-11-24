@@ -1,5 +1,6 @@
-import {authAPI} from "../API/api";
+import {authAPI, profileAPI} from "../API/api";
 import {stopSubmit} from "redux-form";
+import {getProfileThunkCreator} from "./ProfileReducer";
 
 let initState = {
     login: null,
@@ -39,16 +40,20 @@ export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
 export const setUserPhotoActionCreator = (photo) => ({type: 'setUserPhoto', photo});
 
 export const setUserDataThunkCreator = () => {
-    debugger
     return (dispatch) => {
         authAPI.getAuthData().then(data => {
-            debugger
             if (data.resultCode === 0) {
-                debugger
                 dispatch(setUserDataActionCreator(data.data.id, data.data.email, data.data.login, true));
             }
             dispatch(toggleFetchingActionCreator());
         });
+    }
+};
+export const setUserPhotoThunkCreator = (id) => {
+    return (dispatch) => {
+        profileAPI.getProfile(id).then(data => {
+                dispatch(setUserPhotoActionCreator(data.photos.small))
+        })
     }
 };
 export const authLoginThunkCreator = (loginInfo) => {

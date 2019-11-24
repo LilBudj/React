@@ -33,7 +33,6 @@ const profileReducer = (state = initState, action) => {
             return stateCopy;
         }
         case 'setProfile': {
-            debugger
             return{
                 ...state, profile: action.profile
             }
@@ -55,7 +54,6 @@ export const setStatusActionCreator = (status) => ({type: 'setStatus', status});
 export const getProfileThunkCreator = (id) => {
     return (dispatch) => {
         profileAPI.getProfile(id).then(data => {
-            debugger
             dispatch(setProfileActionCreator(data));
         });
     }
@@ -71,7 +69,6 @@ export const putStatusThunkCreator = (status) => {
     return (dispatch) => {
         profileAPI.setStatus(status).then( response => {
             if (response.data.resultCode === 0){
-                debugger
                 dispatch(setStatusActionCreator(status))
             }
         })

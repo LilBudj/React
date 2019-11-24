@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/AppReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/formControls/FormControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/formControls/FormControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ReduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ReduxStore.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,12 +41,12 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JSprojects\01\React\src\components\profile" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JSprojects\01\React\src\redux" />
       <recent name="D:\JSprojects\01\React\src\components\profile\MyPosts\Post_Incubator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JSprojects\01\React\src\components\profile" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,7 +96,9 @@
       <workItem from="1573720779617" duration="95871000" />
       <workItem from="1574179058477" duration="12416000" />
       <workItem from="1574269563782" duration="9605000" />
-      <workItem from="1574349795259" duration="20809000" />
+      <workItem from="1574349795259" duration="23018000" />
+      <workItem from="1574508186984" duration="73000" />
+      <workItem from="1574606894913" duration="2942000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -256,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574452316766</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="stopSubmit">
+      <created>1574454741944</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1574454741944</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +310,7 @@
     <MESSAGE value="Redirect HOC [1]" />
     <MESSAGE value="Login API" />
     <MESSAGE value="Login Flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Flow" />
+    <MESSAGE value="stopSubmit" />
+    <option name="LAST_COMMIT_MESSAGE" value="stopSubmit" />
   </component>
 </project>

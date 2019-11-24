@@ -16,3 +16,9 @@
     float: right;
     margin-right: 30px;
 }
+
+.authPhoto{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}

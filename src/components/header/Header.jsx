@@ -9,7 +9,7 @@ return (
         <img src={hearts} className={style.AppLogo} alt="network logo"/>
         ВХате
         <span className={style.Login}>
-            { props.isAuth? <span>{props.login} <img src={props.photo}/> <button onClick={props.authLogout}>Logout</button></span>:<span>
+            { props.isAuth? <span>{props.login} <img src={props.setUserPhoto(props.id)} className={style.authPhoto}/> <button onClick={props.authLogout}>Logout</button></span>:<span>
             <NavLink to={'/login'}><button> Проходи </button></NavLink>
             <button> Первоход? </button>
         </span>}
