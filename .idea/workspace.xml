@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/AppReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/UsersReselectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ReduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ReduxStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/UsersContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersContainer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -98,7 +92,7 @@
       <workItem from="1574269563782" duration="9605000" />
       <workItem from="1574349795259" duration="23018000" />
       <workItem from="1574508186984" duration="73000" />
-      <workItem from="1574606894913" duration="2942000" />
+      <workItem from="1574606894913" duration="5366000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -268,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574454741944</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="App initialization">
+      <created>1574610690486</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1574610690487</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +312,7 @@
     <MESSAGE value="Login API" />
     <MESSAGE value="Login Flow" />
     <MESSAGE value="stopSubmit" />
-    <option name="LAST_COMMIT_MESSAGE" value="stopSubmit" />
+    <MESSAGE value="App initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="App initialization" />
   </component>
 </project>
