@@ -52,26 +52,24 @@ export const setProfileActionCreator = (profile) => ({type: 'setProfile', profil
 export const setStatusActionCreator = (status) => ({type: 'setStatus', status});
 
 export const getProfileThunkCreator = (id) => {
-    return (dispatch) => {
-        profileAPI.getProfile(id).then(data => {
+    return async (dispatch) => {
+        let data = await profileAPI.getProfile(id);
             dispatch(setProfileActionCreator(data));
-        });
     }
 };
 export const getStatusThunkCreator = (id) => {
-    return (dispatch) => {
-        profileAPI.getStatus(id).then(data => {
+    return async (dispatch) => {
+        let data = await profileAPI.getStatus(id);
             dispatch(setStatusActionCreator(data))
-        })
     }
 };
 export const putStatusThunkCreator = (status) => {
-    return (dispatch) => {
-        profileAPI.setStatus(status).then( response => {
+    return async (dispatch) => {
+        let response = await profileAPI.setStatus(status);
             if (response.data.resultCode === 0){
                 dispatch(setStatusActionCreator(status))
             }
-        })
+
     }
 };
 

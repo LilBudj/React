@@ -40,13 +40,12 @@ export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
 export const setUserPhotoActionCreator = (photo) => ({type: 'setUserPhoto', photo});
 
 export const setUserDataThunkCreator = () => {
-    return (dispatch) => {
-        authAPI.getAuthData().then(data => {
+    return async (dispatch) => {
+        let data = await authAPI.getAuthData();
             if (data.resultCode === 0) {
                 dispatch(setUserDataActionCreator(data.data.id, data.data.email, data.data.login, true));
             }
             dispatch(toggleFetchingActionCreator());
-        });
     }
 };
 export const setUserPhotoThunkCreator = (id) => {
