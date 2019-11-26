@@ -31,6 +31,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
@@ -147,7 +148,7 @@
       <workItem from="1574606894913" duration="15431000" />
       <workItem from="1574693534112" duration="67000" />
       <workItem from="1574696982048" duration="8387000" />
-      <workItem from="1574713676072" duration="11319000" />
+      <workItem from="1574713676072" duration="11894000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -352,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574791451682</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="gh-pages module">
+      <created>1574792400872</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574792400872</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +380,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OOP store" />
     <MESSAGE value="Dispatch refactor" />
     <MESSAGE value="Action Creator" />
     <MESSAGE value="Reducers added" />
@@ -397,6 +404,7 @@
     <MESSAGE value="Hooks useState" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Lazy + Suspense" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lazy + Suspense" />
+    <MESSAGE value="gh-pages module" />
+    <option name="LAST_COMMIT_MESSAGE" value="gh-pages module" />
   </component>
 </project>
