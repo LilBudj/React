@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/suspense/withSuspense.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatusHooks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ReduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ReduxStore.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +147,7 @@
       <workItem from="1574606894913" duration="15431000" />
       <workItem from="1574693534112" duration="67000" />
       <workItem from="1574696982048" duration="8387000" />
-      <workItem from="1574713676072" duration="10434000" />
+      <workItem from="1574713676072" duration="11319000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -352,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574713907908</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Lazy + Suspense">
+      <created>1574791451682</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1574791451682</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +372,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Observer Pattern" />
     <MESSAGE value="OOP store" />
     <MESSAGE value="Dispatch refactor" />
     <MESSAGE value="Action Creator" />
@@ -397,6 +396,7 @@
     <MESSAGE value="demo reselectors" />
     <MESSAGE value="Hooks useState" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Lazy + Suspense" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lazy + Suspense" />
   </component>
 </project>
