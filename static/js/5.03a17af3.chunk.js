@@ -1,0 +1,2 @@
+(this.webpackJsonpreact_1_test=this.webpackJsonpreact_1_test||[]).push([[5],{301:function(e,t,s){e.exports={greetings:"Games_greetings__1pykE"}},305:function(e,t,s){"use strict";s.r(t);var n=s(0),a=s.n(n),r=s(301),c=s.n(r);t.default=function(){return a.a.createElement("div",{className:c.a.greetings},"\u041d\u0430 \u0438\u043d\u0442\u0435\u0440\u0435\u0441 \u0438\u043b\u0438 \u043a\u0430\u043a \u0438\u0433\u0440\u0430\u0442\u044c \u0431\u0443\u0434\u0435\u0448\u044c?")}}}]);
+//# sourceMappingURL=5.03a17af3.chunk.js.map
