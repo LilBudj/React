@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/User.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/ProfileReducer.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validators/ObjectHelpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/suspense/withSuspense.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/AuthReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/UsersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validators/Validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators/Validators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatusHooks.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ReduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ReduxStore.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +38,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -69,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.status should be displayed.">
     <configuration name="new post should be added" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -83,8 +79,37 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="status should be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.test.js" />
+      <test-names>
+        <test-name value="status should be displayed" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="status should be displayed." type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/profile/MyPosts/ProfileInfo/ProfileStatus.test.js" />
+      <test-names>
+        <test-name value="status should be displayed" />
+        <test-name value="" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.status should be displayed." />
+        <item itemvalue="Jest.status should be displayed" />
         <item itemvalue="Jest.new post should be added" />
       </list>
     </recent_temporary>
@@ -129,6 +154,7 @@
       <workItem from="1574606894913" duration="15431000" />
       <workItem from="1574693534112" duration="67000" />
       <workItem from="1574696982048" duration="8387000" />
+      <workItem from="1574713676072" duration="10434000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -319,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574624805478</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Refactoring">
+      <created>1574713907907</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1574713907908</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +372,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Flux modify" />
     <MESSAGE value="Observer Pattern" />
     <MESSAGE value="OOP store" />
     <MESSAGE value="Dispatch refactor" />
@@ -364,6 +396,7 @@
     <MESSAGE value="App initialization" />
     <MESSAGE value="demo reselectors" />
     <MESSAGE value="Hooks useState" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hooks useState" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>

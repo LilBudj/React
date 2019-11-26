@@ -2,19 +2,13 @@ import React from 'react';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from 'react-dom';
-import App from './App';
+import SocialNetwork from './App';
 import store from "./redux/ReduxStore";
-import {BrowserRouter} from "react-router-dom";
-import {Provider} from 'react-redux'
 
 let rerenderEntireTree = () => {
     let state = store.getState();
     ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store}>
-        <App state={state} dispatch={store.dispatch.bind(store)}/>
-            </Provider>
-        </BrowserRouter>
+        <SocialNetwork/>
                          , document.getElementById('root'));
 };
 
