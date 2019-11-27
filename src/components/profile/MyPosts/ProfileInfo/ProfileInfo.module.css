@@ -1,6 +1,6 @@
 .ava{
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 200px;
     border-radius: 60px;
     border-style: solid;
 }
@@ -20,4 +20,9 @@
     font-family: "Bell MT";
     color: white;
     margin-top: 25px;
+}
+
+.contacts{
+    padding-left: 10px;
+    margin-top: 10px;
 }

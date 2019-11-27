@@ -1,4 +1,4 @@
-import {authAPI, profileAPI} from "../API/api";
+import {authAPI, profileAPI, securityAPI} from "../API/api";
 import {stopSubmit} from "redux-form";
 import {getProfileThunkCreator} from "./ProfileReducer";
 
@@ -8,7 +8,8 @@ let initState = {
     userId: null,
     photo: null,
     isFetching: true,
-    isAuth: false
+    isAuth: false,
+    captchaUrl: null
 };
 
 const authReducer = (state = initState, action) => {
@@ -38,6 +39,7 @@ const authReducer = (state = initState, action) => {
 export const setUserDataActionCreator = (userId, email, login, isAuth) => ({type: 'setUser', data: {email, userId, login, isAuth}});
 export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
 export const setUserPhotoActionCreator = (photo) => ({type: 'setUserPhoto', photo});
+export const getCaptchaUrlActionCreator = (captchaUrl) => ({type: 'setUser', data: {captchaUrl}});
 
 export const setUserDataThunkCreator = () => {
     return async (dispatch) => {
@@ -57,10 +59,15 @@ export const setUserPhotoThunkCreator = (id) => {
 };
 export const authLoginThunkCreator = (loginInfo) => {
     return (dispatch) => {
-        authAPI.authLogin(loginInfo.email, loginInfo.password, loginInfo.rememberMe).then(data => {
+        authAPI.authLogin(loginInfo.email, loginInfo.password, loginInfo.rememberMe, loginInfo.captcha).then(data => {
             if (data.resultCode === 0) {
                 dispatch(setUserDataThunkCreator())
-            } else dispatch(stopSubmit('login', {_error: data.messages[0]}))
+            } else {
+                if (data.resultCode === 10){
+                    dispatch(getCaptchaUrlThunkCreator())
+                }
+                dispatch(stopSubmit('login', {_error: data.messages[0]}))
+            }
         })}
 };
 
@@ -71,6 +78,14 @@ export const authLogoutThunkCreator = () => {
                 dispatch(setUserDataActionCreator(null, null, null, false))
             }
         })
+    }
+};
+
+export const getCaptchaUrlThunkCreator = () => {
+    return async (dispatch) => {
+        const response = await securityAPI.getCaptchaUrl();
+        const captchaUrl = response.data.url;
+        dispatch(getCaptchaUrlActionCreator(captchaUrl))
     }
 };
 

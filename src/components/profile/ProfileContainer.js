@@ -7,7 +7,8 @@ import {
     getProfileThunkCreator,
     getStatusThunkCreator,
     putStatusThunkCreator,
-    uploadPhotoThunkCreator
+    uploadPhotoThunkCreator,
+    saveProfileThunkCreator
 } from "../../redux/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {RedirectContainer} from "../common/redirect/RedirectContainer";
@@ -26,7 +27,6 @@ class ProfileContainer extends React.Component{
 
     render =() => {
         let isOwner = (!this.props.match.params.userId);
-        debugger
             return (
                 <Profile {...this.props} isOwner={isOwner}/>
             )
@@ -50,7 +50,8 @@ export default compose(
         setProfile: getProfileThunkCreator,
         getStatus: getStatusThunkCreator,
         putStatus: putStatusThunkCreator,
-        uploadPhoto: uploadPhotoThunkCreator
+        uploadPhoto: uploadPhotoThunkCreator,
+        saveProfile: saveProfileThunkCreator
     }),
     withRouter,
     RedirectContainer

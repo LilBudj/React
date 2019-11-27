@@ -1,4 +1,5 @@
 import {profileAPI} from "../API/api";
+import {stopSubmit} from "redux-form";
 
 let initState = {
     profile: null,
@@ -89,6 +90,19 @@ export const uploadPhotoThunkCreator = (photoFile) => {
             dispatch(uploadPhotoActionCreator(response.data.data.photos))
         }
 
+    }
+};
+export const saveProfileThunkCreator = (profile, getState) => {
+    //const id = getState().auth.userId;
+    return async (dispatch) => {
+        let response = await profileAPI.saveProfile(profile);
+        if (response.data.resultCode === 0){
+            //dispatch(getProfileThunkCreator(id))
+        }
+        else {
+            dispatch(stopSubmit("editProfile",{_error: response.data.messages[0]}))
+            return Promise.reject(response.data.messages[0]);
+        }
     }
 };
 

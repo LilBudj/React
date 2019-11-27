@@ -58,6 +58,9 @@ export const profileAPI = {
             }}).then(response => {
             return response
         })
+    },
+    saveProfile(profile) {
+        return instance.put(`profile`, profile)
     }
 };
 
@@ -67,8 +70,8 @@ export const authAPI = {
             return response.data
         })
     },
-    authLogin(email, password, rememberMe) {
-        return instance.post(`auth/login`, {email, password, rememberMe}). then(response => {
+    authLogin(email, password, rememberMe, captcha) {
+        return instance.post(`auth/login`, {email, password, rememberMe, captcha}). then(response => {
             return response.data
         })
     },
@@ -77,4 +80,10 @@ export const authAPI = {
             return response.data
         })
     }
+};
+
+export const securityAPI = {
+  getCaptchaUrl() {
+      return instance.get(`security/get-captcha-url`)
+  }
 };

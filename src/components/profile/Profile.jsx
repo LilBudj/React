@@ -23,8 +23,9 @@ const Profile = (props) => {
                     <img src={Thiefs} className={style.contentImg}
                          alt='content'/>
                 </div>
-                <ProfileInfo name={props.profile.fullName} age={props.profile.userId} wife={props.profile.lookingForAJobDescription}
-                             contacts={props.profile.contacts} status={props.status} uploadPhoto={props.uploadPhoto} isOwner={props.isOwner}
+                <ProfileInfo name={props.profile.fullName} age={props.profile.userId} job={props.profile.lookingForAJobDescription}
+                             contacts={props.profile.contacts} status={props.status} saveProfile={props.saveProfile}
+                             uploadPhoto={props.uploadPhoto} isOwner={props.isOwner}
                              photo={props.profile.photos.large} getStatus={props.getStatus} putStatus={props.putStatus}/>
                 <PostIncubatorContainer/>
                 {PostElements}
