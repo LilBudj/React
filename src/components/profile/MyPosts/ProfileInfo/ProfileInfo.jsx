@@ -4,6 +4,11 @@ import Mogol from "./Mogol.jpg";
 import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
+    let uploadAvatar = (e) => {
+        if (!!e.target.files.length){
+            props.uploadPhoto(e.target.files[0])
+        }
+    };
     return (
         <div className={style.profileInfo}>
             <img src={!props.photo?Mogol:props.photo} className={style.ava} alt='Avatar picture'/>
@@ -21,6 +26,7 @@ const ProfileInfo = (props) => {
                     <p>{props.contacts.instagram}</p>
                 </div>
             </div>
+            {props.isOwner && <span><input type={'file'} onChange={uploadAvatar}/></span>}
         </div>
     )
 };

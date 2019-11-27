@@ -24,7 +24,7 @@ const Profile = (props) => {
                          alt='content'/>
                 </div>
                 <ProfileInfo name={props.profile.fullName} age={props.profile.userId} wife={props.profile.lookingForAJobDescription}
-                             contacts={props.profile.contacts} status={props.status}
+                             contacts={props.profile.contacts} status={props.status} uploadPhoto={props.uploadPhoto} isOwner={props.isOwner}
                              photo={props.profile.photos.large} getStatus={props.getStatus} putStatus={props.putStatus}/>
                 <PostIncubatorContainer/>
                 {PostElements}

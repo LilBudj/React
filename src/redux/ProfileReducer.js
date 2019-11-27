@@ -42,6 +42,15 @@ const profileReducer = (state = initState, action) => {
                 ...state, status: action.status
             }
         }
+        case 'uploadPhoto': {
+            return{
+                ...state,
+                profile: {
+                    ...state.profile,
+                    photos: action.photos
+                }
+            }
+        }
         default:
             return state;
     }
@@ -50,6 +59,7 @@ export const likePressActionCreator = (id) => ({type: 'likeCounter', id: id});
 export const addPostActionCreator = (post) => ({type: 'addPost', post});
 export const setProfileActionCreator = (profile) => ({type: 'setProfile', profile});
 export const setStatusActionCreator = (status) => ({type: 'setStatus', status});
+export const uploadPhotoActionCreator = (photos) => ({type: 'uploadPhoto', photos});
 
 export const getProfileThunkCreator = (id) => {
     return async (dispatch) => {
@@ -69,6 +79,15 @@ export const putStatusThunkCreator = (status) => {
             if (response.data.resultCode === 0){
                 dispatch(setStatusActionCreator(status))
             }
+
+    }
+};
+export const uploadPhotoThunkCreator = (photoFile) => {
+    return async (dispatch) => {
+        let response = await profileAPI.uploadPhoto(photoFile);
+        if (response.data.resultCode === 0){
+            dispatch(uploadPhotoActionCreator(response.data.data.photos))
+        }
 
     }
 };

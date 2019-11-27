@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+import {HashRouter, Route, withRouter} from 'react-router-dom';
 import './App.css';
 import Nav from './components/navbar/Navbar';
 import UsersContainer from "./components/users/UsersContainer";
@@ -55,11 +55,11 @@ let mapStateToProps = (state) => {
 };
 
 let SocialNetwork = (props) => {
-    return <BrowserRouter>
+    return <HashRouter basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
             <AppContainer {...props}/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 };
 
 const AppContainer =  compose(withRouter,

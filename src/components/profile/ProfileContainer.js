@@ -3,7 +3,11 @@ import {connect} from 'react-redux'
 import Profile from "./Profile";
 import {
     addPostActionCreator,
-    likePressActionCreator, getProfileThunkCreator, getStatusThunkCreator, putStatusThunkCreator
+    likePressActionCreator,
+    getProfileThunkCreator,
+    getStatusThunkCreator,
+    putStatusThunkCreator,
+    uploadPhotoThunkCreator
 } from "../../redux/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {RedirectContainer} from "../common/redirect/RedirectContainer";
@@ -21,8 +25,10 @@ class ProfileContainer extends React.Component{
     }
 
     render =() => {
+        let isOwner = (!this.props.match.params.userId);
+        debugger
             return (
-                <Profile {...this.props}/>
+                <Profile {...this.props} isOwner={isOwner}/>
             )
     }
 }
@@ -43,7 +49,8 @@ export default compose(
         likePress: likePressActionCreator,
         setProfile: getProfileThunkCreator,
         getStatus: getStatusThunkCreator,
-        putStatus: putStatusThunkCreator
+        putStatus: putStatusThunkCreator,
+        uploadPhoto: uploadPhotoThunkCreator
     }),
     withRouter,
     RedirectContainer
