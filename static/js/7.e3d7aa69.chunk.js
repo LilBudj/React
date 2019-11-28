@@ -1,0 +1,2 @@
+(this.webpackJsonpreact_1_test=this.webpackJsonpreact_1_test||[]).push([[7],{300:function(t,e,s){t.exports={settings:"Settings_settings__2jI6m"}},304:function(t,e,s){"use strict";s.r(e);var n=s(0),a=s.n(n),i=s(300),c=s.n(i),r=s(8),u=s(98);e.default=Object(r.d)(u.a)((function(){return a.a.createElement("div",{className:c.a.settings},"Custom Settings")}))}}]);
+//# sourceMappingURL=7.e3d7aa69.chunk.js.map

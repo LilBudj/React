@@ -1,2 +1,0 @@
-(this.webpackJsonpreact_1_test=this.webpackJsonpreact_1_test||[]).push([[6],{299:function(t,s,e){t.exports={music:"Music_music__sg6Eu"}},303:function(t,s,e){"use strict";e.r(s);var c=e(0),a=e.n(c),u=e(299),i=e.n(u),n=e(98),r=e(7);s.default=Object(r.d)(n.a)((function(){return a.a.createElement("div",{className:i.a.music},"Sample Music")}))}}]);
-//# sourceMappingURL=6.79bd2de5.chunk.js.map
