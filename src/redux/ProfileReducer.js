@@ -14,7 +14,7 @@ let initState = {
 
 const profileReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'addPost': {
+        case 'ADD_POST': {
             let obj = {
                 message: action.post,
                 id: state.postData.length + 1,
@@ -25,7 +25,7 @@ const profileReducer = (state = initState, action) => {
                 postData: [...state.postData, obj],
             };
         }
-        case 'likeCounter': {
+        case 'LIKE_COUNTER': {
             let stateCopy = {
                 ...state,
                 postData: [...state.postData],
@@ -33,17 +33,17 @@ const profileReducer = (state = initState, action) => {
             stateCopy.postData[action.id - 1].likes++;
             return stateCopy;
         }
-        case 'setProfile': {
+        case 'SET_PROFILE': {
             return{
                 ...state, profile: action.profile
             }
         }
-        case 'setStatus': {
+        case 'SET_STATUS': {
             return{
                 ...state, status: action.status
             }
         }
-        case 'uploadPhoto': {
+        case 'UPLOAD_PHOTO': {
             return{
                 ...state,
                 profile: {
@@ -56,11 +56,11 @@ const profileReducer = (state = initState, action) => {
             return state;
     }
 };
-export const likePressActionCreator = (id) => ({type: 'likeCounter', id: id});
-export const addPostActionCreator = (post) => ({type: 'addPost', post});
-export const setProfileActionCreator = (profile) => ({type: 'setProfile', profile});
-export const setStatusActionCreator = (status) => ({type: 'setStatus', status});
-export const uploadPhotoActionCreator = (photos) => ({type: 'uploadPhoto', photos});
+export const likePressActionCreator = (id) => ({type: 'LIKE_COUNTER', id: id});
+export const addPostActionCreator = (post) => ({type: 'ADD_POST', post});
+export const setProfileActionCreator = (profile) => ({type: 'SET_PROFILE', profile});
+export const setStatusActionCreator = (status) => ({type: 'SET_STATUS', status});
+export const uploadPhotoActionCreator = (photos) => ({type: 'UPLOAD_PHOTO', photos});
 
 export const getProfileThunkCreator = (id) => {
     return async (dispatch) => {

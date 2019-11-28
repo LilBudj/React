@@ -36,13 +36,12 @@ let mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
         isFetching: state.auth.isFetching,
         login: state.auth.login,
-        id: state.auth.userId
+        photo: state.auth.photo
     }
 };
 
 export default connect (mapStateToProps, {
     setUserData: setUserDataThunkCreator,
     toggle: toggleFetchingActionCreator,
-    setUserPhoto: setUserPhotoThunkCreator,
     authLogout: authLogoutThunkCreator,
 })(HeaderContainer)

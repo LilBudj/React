@@ -1,4 +1,3 @@
-import {authAPI} from "../API/api";
 import {setUserDataThunkCreator} from "./AuthReducer";
 
 let initState = {
@@ -7,7 +6,7 @@ let initState = {
 
 const appReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'setInitialized': {
+        case 'SET_INITIALIZED': {
             return {
                 ...state,
                initialized: true
@@ -18,7 +17,7 @@ const appReducer = (state = initState, action) => {
     }
 };
 
-export const setInitializedActionCreator = () => ({type: 'setInitialized' });
+export const setInitializedActionCreator = () => ({type: 'SET_INITIALIZED' });
 
 export const initializeAppThunkCreator = () => {
     return (dispatch) => {

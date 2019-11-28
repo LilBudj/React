@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HashRouter, Route, withRouter} from 'react-router-dom';
+import {HashRouter, Redirect, Route, withRouter} from 'react-router-dom';
 import './App.css';
 import Nav from './components/navbar/Navbar';
 import UsersContainer from "./components/users/UsersContainer";
@@ -20,8 +20,15 @@ const Settings = React.lazy(()=> import('./components/Settings/Settings'));
 const Games = React.lazy(()=>import('./components/Games/Games'))
 
 class App extends Component {
+    catchAllUnhandledErrors = (reason, promise) => {
+        alert("Some error occured")
+    } ;
     componentDidMount() {
         this.props.setUserData()
+        window.addEventListener("unhandledRejection", this.catchAllUnhandledErrors);
+    }
+    componentWillMount() {
+        window.removeEventListener("unhandledRejection", this.catchAllUnhandledErrors);
     }
 
     render() {
@@ -33,6 +40,7 @@ class App extends Component {
                 <HeaderContainer/>
                 <Nav friends={this.props.friendsData}/>
                 <div>
+                    <Route exact path='/' render={()=> <Redirect to={'/ProfileContainer'}/>}/>
                     <Route path='/Profile/:userId?' render={() => <ProfileContainer/>}/>
                     <Route exact path='/Dialogs' render={() => withSuspense(DialogsContainer)}/>
                     <Route exact path='/Users' render={() => <UsersContainer/>}/>

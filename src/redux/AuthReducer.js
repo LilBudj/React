@@ -1,6 +1,5 @@
 import {authAPI, profileAPI, securityAPI} from "../API/api";
 import {stopSubmit} from "redux-form";
-import {getProfileThunkCreator} from "./ProfileReducer";
 
 let initState = {
     login: null,
@@ -14,19 +13,19 @@ let initState = {
 
 const authReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'setUser': {
+        case 'SET_USER': {
             return {
                 ...state,
                ...action.data,
             };
         }
-        case 'setUserPhoto': {
+        case 'SET_USER_PHOTO': {
             return {
                 ...state,
                 photo: action.photo
             }
         }
-        case 'toggleFetching': {
+        case 'TOGGLE_FETCHING': {
             return{
                 ...state, isFetching: false
             }
@@ -36,10 +35,10 @@ const authReducer = (state = initState, action) => {
     }
 };
 
-export const setUserDataActionCreator = (userId, email, login, isAuth) => ({type: 'setUser', data: {email, userId, login, isAuth}});
-export const toggleFetchingActionCreator = () => ({type: 'toggleFetching'});
-export const setUserPhotoActionCreator = (photo) => ({type: 'setUserPhoto', photo});
-export const getCaptchaUrlActionCreator = (captchaUrl) => ({type: 'setUser', data: {captchaUrl}});
+export const setUserDataActionCreator = (userId, email, login, isAuth) => ({type: 'SET_USER', data: {email, userId, login, isAuth}});
+export const toggleFetchingActionCreator = () => ({type: 'TOGGLE_FETCHING'});
+export const setUserPhotoActionCreator = (photo) => ({type: 'SET_USER_PHOTO', photo});
+export const getCaptchaUrlActionCreator = (captchaUrl) => ({type: 'SET_USER', data: {captchaUrl}});
 
 export const setUserDataThunkCreator = () => {
     return async (dispatch) => {
@@ -51,33 +50,30 @@ export const setUserDataThunkCreator = () => {
     }
 };
 export const setUserPhotoThunkCreator = (id) => {
-    return (dispatch) => {
-        profileAPI.getProfile(id).then(data => {
-                dispatch(setUserPhotoActionCreator(data.photos.small))
-        })
+    return async (dispatch) => {
+        let data = await profileAPI.getProfile(id);
+        dispatch(setUserPhotoActionCreator(data.photos.small))
     }
 };
 export const authLoginThunkCreator = (loginInfo) => {
-    return (dispatch) => {
-        authAPI.authLogin(loginInfo.email, loginInfo.password, loginInfo.rememberMe, loginInfo.captcha).then(data => {
+    return async (dispatch) => {
+        let data = await authAPI.authLogin(loginInfo.email, loginInfo.password, loginInfo.rememberMe, loginInfo.captcha);
             if (data.resultCode === 0) {
                 dispatch(setUserDataThunkCreator())
             } else {
-                if (data.resultCode === 10){
+                if (data.resultCode === 10) {
                     dispatch(getCaptchaUrlThunkCreator())
                 }
                 dispatch(stopSubmit('login', {_error: data.messages[0]}))
-            }
-        })}
+            }}
 };
 
 export const authLogoutThunkCreator = () => {
-    return (dispatch) => {
-        authAPI.authLogout().then(data => {
+    return async (dispatch) => {
+        let data = await authAPI.authLogout();
             if (data.resultCode === 0) {
                 dispatch(setUserDataActionCreator(null, null, null, false))
             }
-        })
     }
 };
 
