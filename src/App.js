@@ -27,7 +27,7 @@ class App extends Component {
         this.props.setUserData()
         window.addEventListener("unhandledRejection", this.catchAllUnhandledErrors);
     }
-    componentWillMount() {
+    componentWillUnmount() {
         window.removeEventListener("unhandledRejection", this.catchAllUnhandledErrors);
     }
 

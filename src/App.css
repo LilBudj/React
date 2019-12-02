@@ -3,11 +3,12 @@
 
   grid-template-areas: 
   "h h h"
-  "n c c";
+  "n n n"
+  "c c c";
 
-  grid-template-rows: 110px 1fr;
-  grid-template-columns: 3fr 5fr 5fr;
+  grid-template-rows: 110px 90px 3fr;
+  grid-template-columns: 5fr 5fr 5fr;
   grid-gap: 0px;
 
-  background-color: rgba(45, 45, 45, 0.85);
+  background-color: #ffffff;
 }

@@ -13,7 +13,7 @@ const Nav = (props) => {
 
     return(
         <div className={style.nav}>
-            <ul>
+            <ul className={style.navList}>
                 <li><NavLink to='/Profile' activeClassName={style.aitem} className={style.item}> Profile</NavLink></li>
                 <li><NavLink to='/Feed' activeClassName={style.aitem} className={style.item}>Feed</NavLink></li>
                 <li><NavLink to='/Dialogs' activeClassName={style.aitem} className={style.item}>Messages</NavLink></li>
@@ -22,10 +22,6 @@ const Nav = (props) => {
                 <li><NavLink to='/Games' activeClassName={style.aitem} className={style.item}>Games</NavLink></li>
                 <li><NavLink to='/Users' activeClassName={style.aitem} className={style.item}>Users</NavLink></li>
             </ul>
-            <h1 className={style.friends}>Friends</h1>
-            <div className={style.friendsBlock}>
-                {FriendsBlock}
-            </div>
         </div>
         );
         };

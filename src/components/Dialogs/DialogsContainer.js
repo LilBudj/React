@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import {addMessageActionCreator, updateCurrentMessageActionCreator} from "../../redux/DialogsReducer";
+import {addMessageActionCreator} from "../../redux/DialogsReducer";
 import Dialogs from "./Dialogs";
 import {RedirectContainer} from "../common/redirect/RedirectContainer";
 import {compose} from "redux";

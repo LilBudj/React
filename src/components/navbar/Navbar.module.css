@@ -2,20 +2,36 @@
     margin: 0px 30px 0px 30px;
     grid-area: n;
     background-color: red;
+    border-radius: 40px;
 }
 
 .aitem{
-    background-color: #5e0207;
+    color: #5e0207;
 }
 
 .item{
     text-decoration: none;
-    color: white;
+    font-size: 24px;
+}
+
+.item:hover{
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 li{
+    width: 120px;
+    background-color: white;
     margin-bottom: 10px;
     list-style-type: none;
+    border-radius: 30px;
+    text-align: center;
+    color: red
+}
+
+li:active{
+    background-color: #cc0000;
+    color: white;
 }
 
 .photo{
@@ -24,11 +40,8 @@ li{
     border-radius: 30px;
 }
 
-.friendsBlock{
+.navList{
     display: flex;
     justify-content: space-evenly;
-}
-
-.friends{
-    margin: 30px;
+    align-items: center;
 }
