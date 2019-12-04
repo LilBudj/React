@@ -3,9 +3,11 @@
     grid-area: n;
     background-color: red;
     border-radius: 40px;
+    display: flex;
 }
 
-.aitem{
+.aitem button{
+    background-color: darkmagenta;
     color: #5e0207;
 }
 
@@ -20,7 +22,7 @@
 }
 
 li{
-    width: 120px;
+    width: 10%;
     background-color: white;
     margin-bottom: 10px;
     list-style-type: none;
@@ -29,9 +31,15 @@ li{
     color: red
 }
 
-li:active{
+button:active{
     background-color: #cc0000;
     color: white;
+}
+
+.item button{
+    width: 100%;
+    border-radius: 30px;
+    font-size: inherit;
 }
 
 .photo{
@@ -44,4 +52,5 @@ li:active{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
 }
