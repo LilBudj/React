@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="46c2a35b-7b12-47cc-8dfa-599818f361b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.module.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +176,7 @@
       <workItem from="1574963782657" duration="2417000" />
       <workItem from="1575054129952" duration="1559000" />
       <workItem from="1575114626783" duration="6819000" />
-      <workItem from="1575471507531" duration="1403000" />
+      <workItem from="1575471507531" duration="3436000" />
     </task>
     <task id="LOCAL-00001" summary="Data modification">
       <created>1572805172977</created>
@@ -439,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575317224763</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="stylizing refactoring [3]">
+      <created>1575472994003</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1575472994003</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Context API" />
     <MESSAGE value="Connect [1]" />
     <MESSAGE value="Connect [2]" />
     <MESSAGE value="Axios Get" />
@@ -484,6 +488,7 @@
     <MESSAGE value="captcha" />
     <MESSAGE value="stylizing refactoring [1]" />
     <MESSAGE value="stylizing refactoring [2]" />
-    <option name="LAST_COMMIT_MESSAGE" value="stylizing refactoring [2]" />
+    <MESSAGE value="stylizing refactoring [3]" />
+    <option name="LAST_COMMIT_MESSAGE" value="stylizing refactoring [3]" />
   </component>
 </project>
