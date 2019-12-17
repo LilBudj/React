@@ -4,13 +4,6 @@ import {NavLink} from 'react-router-dom';
 
 const Nav = (props) => {
 
-    let FriendsBlock = props.friends.map((obj, index) => {
-        return <div key={index}>
-            <img src={obj.src} className={style.photo} alt="sample"/>
-            <div>{obj.name}</div>
-        </div>
-       })
-
     return(
         <div className={style.nav}>
             <ul className={style.navList}>

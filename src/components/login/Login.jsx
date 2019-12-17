@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Login.module.css'
-import {Field, reduxForm} from "redux-form";
+import {reduxForm} from "redux-form";
 import {authLoginThunkCreator} from "../../redux/AuthReducer";
 import {Input} from "../common/formControls/FormControls";
 import {createField, maxLengthCreator, required} from "../../utils/validators/Validators";
@@ -21,7 +21,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
             </div>}
             {captchaUrl &&
             <div>
-                <img src={captchaUrl}/>
+                <img src={captchaUrl} alt={'captcha'}/>
                 {createField('Captcha', 'captcha', [required], Input)}
             </div>}
             <div>
